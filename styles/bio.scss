@@ -1,9 +1,84 @@
-@use"partials/globals";
-@use"partials/variables" as *;
+@use "partials/globals";
+@use "partials/variables" as *;
 @use "partials/mixins" as *;
+@use "partials/typography" as *;
+
+/* tablet and desktop breakpoint mixins */ /*# sourceMappingURL=bio.css.map */
+
+.header {
+  background-color: $primary-color-B;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  padding-top:1rem;
+  padding-left: 2rem;
+
+  /*gap: 1.5rem;*/
+  color: $primary-color-W;
+
+  @include respond-to("mobile") {
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
 
 
-  
-  /* tablet and desktop breakpoint mixins *//*# sourceMappingURL=bio.css.map */
 
-  
+  &__nav-container {
+    display: flex;
+    padding:0rem;
+    width:100vw;
+    margin:0px;
+   
+  }
+
+  &__nav-li {
+    width:50%;
+    display:flex;
+    justify-content: center;
+    color: $primary-color-W;
+    list-style-type: none; 
+    padding-top:1rem;
+    padding-bottom:1rem;
+  }
+
+  &--item {
+    text-decoration: none;
+    color: $primary-color-W;
+  }
+
+  a {
+    color: $primary-color-W;
+    text-decoration: none;
+    list-style-type: none;
+    justify-content: space-between;
+    display: flex;
+    font-size: 14px;
+  }
+}
+
+  .hero {
+    
+    &__image{
+    background-image: url("/assets/Images/hero-bio.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:250px;
+  }
+
+    &__title{
+      color:$primary-color-W;
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .hero-text{
+    padding:1rem;
+ 
+  }

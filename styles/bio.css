@@ -26,10 +26,75 @@
 
 html,
 body {
+  width: 100vw;
   padding: 0px;
   margin: 0px;
   font-family: "AvenirNext LT Pro";
-  font-weight: 400;
 }
 
-/* tablet and desktop breakpoint mixins */ /*# sourceMappingURL=bio.css.map */
+/* tablet and desktop breakpoint mixins */ 
+.header {
+  background-color: #323232;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  /*gap: 1.5rem;*/
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+}
+.header__nav-container {
+  display: flex;
+  padding: 0rem;
+  width: 100vw;
+  margin: 0px;
+}
+.header__nav-li {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  list-style-type: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.header--item {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.header a {
+  color: #FFFFFF;
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: space-between;
+  display: flex;
+  font-size: 14px;
+}
+
+.hero__image {
+  background-image: url("/assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+}
+.hero__title {
+  color: #FFFFFF;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text {
+  padding: 1rem;
+}/*# sourceMappingURL=bio.css.map */
