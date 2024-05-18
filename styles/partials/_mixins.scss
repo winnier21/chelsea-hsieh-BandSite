@@ -1,0 +1,16 @@
+@use "./variables" as *;
+
+/* tablet and desktop breakpoint mixins */
+@mixin mobile {
+    @media screen and (min-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+// Mixins

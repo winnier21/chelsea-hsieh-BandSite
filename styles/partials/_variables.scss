@@ -1,0 +1,24 @@
+@use "typography" as *;
+
+
+$mobile-breakpoint: 320px;
+$desktop-breakpoint: 1920px;
+
+$primary-color-B: #323232;
+$primary-color-S: #AFAFAF;
+$primary-color-W: #FFFFFF;
+$secondary-color-B:  #000000;
+$secondary-color-S: #E1E1E1;
+$secondary-color-W: #FAFAFA;
+
+$padding-increment: 8px;
+
+
+$font:'AvenirNext LT Pro';
+
+// Set your font weights as variables
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+
+
