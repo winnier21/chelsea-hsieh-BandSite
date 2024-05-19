@@ -1,4 +1,4 @@
-@use "partials/globals";
+@use "partials/globals" as *;
 @use "partials/variables" as *;
 @use "partials/mixins" as *;
 @use "partials/typography" as *;
@@ -11,13 +11,11 @@
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-  padding-top: 1rem;
+  padding-top: 0.7rem;
   padding-left: 2rem;
-
-  /*gap: 1.5rem;*/
   color: $primary-color-W;
 
-  @include respond-to("mobile") {
+  @include mobile {
     justify-content: center;
     padding-left: 0px;
     padding-right: 0px;
@@ -29,6 +27,10 @@
     padding: 0rem;
     width: 100vw;
     margin: 0px;
+
+    @include tablet {
+      width: auto;
+    }
   }
 
   &__nav-li {
@@ -37,8 +39,9 @@
     justify-content: center;
     color: $primary-color-W;
     list-style-type: none;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    height: 2rem;
   }
 
   &--item {
@@ -54,6 +57,12 @@
     display: flex;
     font-size: 14px;
   }
+  &__nav-li:hover {
+    border-bottom: 0.18rem solid $primary-color-W;
+    border-color: $primary-color-W;
+    font-weight: 700;
+    height: 2rem;
+  }
 }
 
 .hero {
@@ -62,6 +71,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
+
+  @include tablet {
+    height: 18rem;
+  }
 
   &__overlay {
     background: rgba($primary-color-B, 0.5);
@@ -75,8 +88,11 @@
     font-weight: 600;
     align-self: center;
 
-    @include respond-to("mobile") {
+    @include mobile {
       font-size: 1rem;
+    }
+    @include tablet {
+      font-size: 2.2rem;
     }
   }
 }
@@ -91,13 +107,20 @@
     font-weight: 600;
     padding-bottom: 1rem;
 
-    @include respond-to("mobile") {
+    @include mobile {
       font-size: 1rem;
     }
   }
 
   &__img {
     width: 100%;
+  }
+
+  &__content {
+    @include tablet {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   &__paragraph {
@@ -112,18 +135,35 @@
 .bio {
   padding: 1rem;
 
+  @include tablet {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   &__title {
     margin: 0;
-    @include respond-to("mobile") {
+    @include mobile {
       font-size: 0.6rem;
       font-weight: 600;
     }
   }
+  &__container {
+    @include tablet {
+      display: flex;
+    }
+  }
+
   &__paragraph {
-    @include respond-to("mobile") {
+    @include mobile {
       font-size: 0.53rem;
       font-weight: 400;
       line-height: 0.8rem;
+    }
+    @include tablet {
+      font-size: 0.5rem;
+      padding-right: 1rem;
+      line-height:0.8rem;
+      
     }
   }
 }
@@ -132,13 +172,24 @@
   margin: 0;
   padding: 1rem;
   background-color: $secondary-color-W;
-  @include respond-to("phone") {
+
+&__container{
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+  @include mobile {
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 0px;
   }
 
-  @include respond-to("tablet") {
+  @include tablet {
+    
     padding-left: 36px;
     padding-right: 36px;
   }
@@ -152,7 +203,7 @@
 
   &__title {
     margin: 0;
-    @include respond-to("mobile") {
+    @include mobile {
       font-size: 1rem;
       font-weight: 600;
     }
@@ -160,13 +211,16 @@
   &__img {
     margin: 0;
     padding-top: 1rem;
+    
+    @include tablet{
+      width:30%;
 
-    @include respond-to("mobile") {
-      max-width: calc(100%);
     }
   }
   img {
     width: 100%;
+
+    
   }
 }
 
@@ -183,35 +237,32 @@
     font-size: 1rem;
   }
   &__icon {
-    padding:1rem 1rem 1rem 0rem;
+    padding: 1rem 1rem 1rem 0rem;
   }
-h3{
-  font-weight: 600;
-  
-}
-  &__information{
-    color:$primary-color-W;
-    font-size:0.5rem;
+  h3 {
+    font-weight: 600;
+  }
+  &__information {
+    color: $primary-color-W;
+    font-size: 0.5rem;
     font-weight: 400;
     line-height: 0.9rem;
   }
-  a{
+  a {
     text-decoration: none;
     color: $primary-color-W;
-
   }
-  &__copyright{
+  &__copyright {
     padding-top: 1rem;
 
-    h3{
-      font-size:1rem;
+    h3 {
+      font-size: 1rem;
       font-weight: 400;
       margin-bottom: 0.5rem;
     }
-    p{
+    p {
       font-size: 0.45rem;
-      margin:0;
+      margin: 0;
     }
   }
-
 }
