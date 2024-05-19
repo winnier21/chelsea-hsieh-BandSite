@@ -125,5 +125,28 @@ body {
 }
 .about__paragraph {
   font-size: 0.57rem;
-  line-height: 1rem;
+  line-height: 0.9rem;
+}
+.about span {
+  line-height: 1.2rem;
+}
+
+.bio {
+  padding: 1rem;
+}
+.bio__title {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .bio__title {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+}
+@media (max-width: 768px) {
+  .bio__paragraph {
+    font-size: 0.53rem;
+    font-weight: 400;
+    line-height: 0.8rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
