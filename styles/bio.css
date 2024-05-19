@@ -156,6 +156,18 @@ body {
   padding: 1rem;
   background-color: #FAFAFA;
 }
+@media (max-width: 1279px) and (min-width: 768px) {
+  .photo-gallery {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+.photo-gallery__heading {
+  font-size: 2.5rem;
+  color: #323232;
+  margin-bottom: 2rem;
+  text-align: left;
+}
 .photo-gallery__title {
   margin: 0;
 }
@@ -169,6 +181,52 @@ body {
   margin: 0;
   padding-top: 1rem;
 }
+@media (max-width: 768px) {
+  .photo-gallery__img {
+    max-width: 100%;
+  }
+}
 .photo-gallery img {
   width: 100%;
+}
+
+.footer {
+  background-color: #323232;
+}
+.footer__container {
+  padding: 1rem;
+}
+.footer__title {
+  color: #FFFFFF;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.footer__icon {
+  padding: 1rem 1rem 1rem 0rem;
+}
+.footer h3 {
+  font-weight: 600;
+}
+.footer__information {
+  color: #FFFFFF;
+  font-size: 0.5rem;
+  font-weight: 400;
+  line-height: 0.9rem;
+}
+.footer a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.footer__copyright {
+  padding-top: 1rem;
+}
+.footer__copyright h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.footer__copyright p {
+  font-size: 0.45rem;
+  margin: 0;
 }/*# sourceMappingURL=bio.css.map */
