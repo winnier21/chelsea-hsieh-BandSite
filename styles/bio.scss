@@ -162,8 +162,7 @@
     @include tablet {
       font-size: 0.5rem;
       padding-right: 1rem;
-      line-height:0.8rem;
-      
+      line-height: 0.8rem;
     }
   }
 }
@@ -173,14 +172,13 @@
   padding: 1rem;
   background-color: $secondary-color-W;
 
-&__container{
-  display:flex;
-  flex-wrap:wrap;
-  width:100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   @include mobile {
     padding-left: 16px;
@@ -189,7 +187,6 @@
   }
 
   @include tablet {
-    
     padding-left: 36px;
     padding-right: 36px;
   }
@@ -211,16 +208,13 @@
   &__img {
     margin: 0;
     padding-top: 1rem;
-    
-    @include tablet{
-      width:30%;
 
+    @include tablet {
+      width: 30%;
     }
   }
   img {
     width: 100%;
-
-    
   }
 }
 
@@ -230,12 +224,35 @@
   &__container {
     padding: 1rem;
   }
+  &__socialmedia {
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @include tablet {
+      padding: 1rem;
+      flex-direction: column;
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 1;
+    }
+  }
   &__title {
     color: $primary-color-W;
     margin: 0;
     font-weight: 600;
     font-size: 1rem;
+
+    @include tablet {
+      margin: auto 0;
+      padding-right: 1rem;
+    }
   }
+
   &__icon {
     padding: 1rem 1rem 1rem 0rem;
   }
@@ -247,13 +264,22 @@
     font-size: 0.5rem;
     font-weight: 400;
     line-height: 0.9rem;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 1rem;
+    }
   }
+
   a {
     text-decoration: none;
     color: $primary-color-W;
   }
   &__copyright {
     padding-top: 1rem;
+    color:$primary-color-W;
 
     h3 {
       font-size: 1rem;
@@ -263,6 +289,12 @@
     p {
       font-size: 0.45rem;
       margin: 0;
+    }
+
+    &--logo {
+      @include tablet {
+        display: none;
+      }
     }
   }
 }
