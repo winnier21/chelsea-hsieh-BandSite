@@ -149,4 +149,26 @@ body {
     font-weight: 400;
     line-height: 0.8rem;
   }
+}
+
+.photo-gallery {
+  margin: 0;
+  padding: 1rem;
+  background-color: #FAFAFA;
+}
+.photo-gallery__title {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .photo-gallery__title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+.photo-gallery__img {
+  margin: 0;
+  padding-top: 1rem;
+}
+.photo-gallery img {
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

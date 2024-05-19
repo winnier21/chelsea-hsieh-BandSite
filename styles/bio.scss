@@ -127,3 +127,47 @@
     }
   }
 }
+
+.photo-gallery{
+  margin:0;
+  padding:1rem;
+  background-color: $secondary-color-W;
+  @include respond-to ('phone') {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0px;
+  }
+
+  @include respond-to ('tablet') {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    color: $BandSite-Black;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  &__title{
+    margin:0;
+    @include respond-to("mobile") {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+&__img{
+  margin:0;
+  padding-top:1rem;
+
+
+  @include respond-to('mobile') {
+    max-width: calc(100%);
+  }
+}
+  img{
+    width:100%;
+  }
+}
+
