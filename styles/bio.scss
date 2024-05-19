@@ -11,7 +11,7 @@
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-  padding-top:1rem;
+  padding-top: 1rem;
   padding-left: 2rem;
 
   /*gap: 1.5rem;*/
@@ -24,24 +24,21 @@
     padding-bottom: 0px;
   }
 
-
-
   &__nav-container {
     display: flex;
-    padding:0rem;
-    width:100vw;
-    margin:0px;
-   
+    padding: 0rem;
+    width: 100vw;
+    margin: 0px;
   }
 
   &__nav-li {
-    width:50%;
-    display:flex;
+    width: 50%;
+    display: flex;
     justify-content: center;
     color: $primary-color-W;
-    list-style-type: none; 
-    padding-top:1rem;
-    padding-bottom:1rem;
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   &--item {
@@ -59,26 +56,52 @@
   }
 }
 
-  .hero {
-    
-    &__image{
-    background-image: url("/assets/Images/hero-bio.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height:250px;
-  }
+.hero {
+  background-image: url("/assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
 
-    &__title{
-      color:$primary-color-W;
-      font-weight: 700;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+  &__overlay {
+    background: rgba($primary-color-B, 0.5);
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+  }
+  &__title {
+    color: $primary-color-W;
+    margin: 0px;
+    font-weight: 600;
+    align-self: center;
+
+    @include respond-to("mobile") {
+      font-size: 1rem;
+    }
+  }
+}
+
+.about {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &__header {
+    margin: 0;
+    font-weight: 600;
+    padding-bottom: 1rem;
+
+    @include respond-to("mobile") {
+      font-size: 1rem;
     }
   }
 
-  .hero-text{
-    padding:1rem;
- 
+  &__img {
+    width: 100%;
   }
+
+  &__paragraph {
+    font-size: 0.57rem;
+    line-height: 1rem;
+  }
+}
