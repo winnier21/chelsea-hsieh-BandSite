@@ -3,12 +3,17 @@
 
 * {
   box-sizing: border-box;
+  
 }
 
-html,
+
 body {
   width: 100vw;
   padding: 0px;
   margin: 0px;
   font-family: $font;
+}
+
+html{
+  font-size:24px;
 }

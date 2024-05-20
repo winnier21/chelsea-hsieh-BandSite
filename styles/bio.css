@@ -23,12 +23,15 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   width: 100vw;
   padding: 0px;
   margin: 0px;
   font-family: "AvenirNext LT Pro";
+}
+
+html {
+  font-size: 24px;
 }
 
 /* tablet and desktop breakpoint mixins */ 
@@ -107,7 +110,11 @@ body {
   border-bottom: 0.18rem solid #ffffff;
   border-color: #ffffff;
   font-weight: 700;
-  height: 3rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__nav-li:hover {
+    height: 3rem;
+  }
 }
 
 /*Hero section*/
@@ -256,8 +263,17 @@ body {
 /*Photo Gallery section*/
 .photo-gallery {
   margin: 0;
-  padding: 1rem;
   background-color: #fafafa;
+}
+@media screen and (max-width: 767px) {
+  .photo-gallery {
+    padding: 1rem 0.67rem 0.67rem 0.67rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .photo-gallery {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
 }
 .photo-gallery__container {
   display: flex;
@@ -265,20 +281,6 @@ body {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-}
-@media screen and (max-width: 767px) {
-  .photo-gallery {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 0px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .photo-gallery {
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 2rem;
-  }
 }
 .photo-gallery__title {
   margin: 0;
@@ -291,16 +293,22 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__title {
-    font-weight: 400;
+    font-weight: 600;
+    padding-bottom: 0.8rem;
   }
 }
 .photo-gallery__img {
   margin: 0;
-  padding-top: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .photo-gallery__img {
+    padding-top: 0.5rem;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__img {
-    width: 30%;
+    width: 31.5%;
+    padding-top: 0.5rem;
   }
 }
 .photo-gallery img {
@@ -313,7 +321,11 @@ body {
 }
 .footer__container {
   padding: 1rem;
-  padding-bottom: 2.8rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__container {
+    padding-bottom: 2.8rem;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer__socialmedia {
