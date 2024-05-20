@@ -441,7 +441,20 @@ html {
     padding-bottom: 2.8rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__container {
+    padding-bottom: 2.8rem;
+    padding-left: 6.3rem;
+    padding-right: 4.3rem;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__socialmedia {
+    display: flex;
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .footer__socialmedia {
     display: flex;
     padding-top: 0.5rem;
@@ -451,6 +464,15 @@ html {
   display: none;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__logo {
+    padding: 1rem;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
   .footer__logo {
     padding: 1rem;
     flex-direction: column;
@@ -476,10 +498,26 @@ html {
     align-items: center;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__title {
+    margin: 0 auto;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .footer__icon {
   padding: 1rem 1rem 1rem 0rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__icon {
+    height: 2.9rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .footer__icon {
     height: 2.9rem;
   }
@@ -501,6 +539,20 @@ html {
     padding-right: 1rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer__information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    font-size: 0.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__agency p {
+    font-size: 0.55rem;
+  }
+}
 .footer a {
   text-decoration: none;
   color: #ffffff;
@@ -517,8 +569,14 @@ html {
 .footer__copyright p {
   font-size: 0.45rem;
   margin: 0;
+  font-size: 0.57rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__copyright--logo img {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
   .footer__copyright--logo img {
     display: none;
   }

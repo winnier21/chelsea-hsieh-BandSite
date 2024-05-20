@@ -170,7 +170,6 @@
     }
     @include desktop {
       padding-left: 4rem;
-      
     }
   }
 
@@ -182,8 +181,8 @@
     }
     @include desktop {
       height: 19rem;
-      padding-left:8.5rem;
-      padding-right:8.5rem;
+      padding-left: 8.5rem;
+      padding-right: 8.5rem;
     }
   }
 
@@ -192,7 +191,6 @@
       padding-left: 3rem;
       padding-right: 3rem;
     }
-
   }
 
   &__quote {
@@ -208,8 +206,8 @@
       font-size: 0.7rem;
       line-height: 1.3rem;
       font-weight: 600;
-      padding-left:8.5rem;
-      padding-right:16.5rem;
+      padding-left: 8.5rem;
+      padding-right: 16.5rem;
     }
   }
   span {
@@ -264,8 +262,8 @@
     }
     @include desktop {
       display: flex;
-      padding-left:5.5rem;
-      padding-right:6rem;
+      padding-left: 5.5rem;
+      padding-right: 6rem;
     }
   }
   &__paragraph {
@@ -327,7 +325,6 @@
     @include desktop {
       font-weight: 600;
       padding-bottom: 0.8rem;
- 
     }
   }
   &__img {
@@ -360,9 +357,18 @@
     @include tablet {
       padding-bottom: 2.8rem;
     }
+    @include desktop {
+      padding-bottom: 2.8rem;
+      padding-left: 6.3rem;
+      padding-right: 4.3rem;
+    }
   }
   &__socialmedia {
     @include tablet {
+      display: flex;
+      padding-top: 0.5rem;
+    }
+    @include desktop {
       display: flex;
       padding-top: 0.5rem;
     }
@@ -372,6 +378,13 @@
     display: none;
 
     @include tablet {
+      padding: 1rem;
+      flex-direction: column;
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 1;
+    }
+    @include desktop {
       padding: 1rem;
       flex-direction: column;
       display: flex;
@@ -394,11 +407,23 @@
       justify-content: center;
       align-items: center;
     }
+    @include desktop {
+      margin: 0 auto;
+      padding-right: 1rem;
+      font-size: 1.5rem;
+      height: 2.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__icon {
     padding: 1rem 1rem 1rem 0rem;
     @include tablet {
+      height: 2.9rem;
+    }
+    @include desktop {
       height: 2.9rem;
     }
   }
@@ -418,6 +443,23 @@
       align-items: center;
       padding-right: 1rem;
     }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 70%;
+      font-size: 0.5rem;
+    }
+  }
+
+  &__agency{
+
+    p{
+    @include desktop{
+      font-size:0.55rem;
+
+    }
+  }
   }
 
   a {
@@ -437,10 +479,14 @@
     p {
       font-size: 0.45rem;
       margin: 0;
+      font-size: 0.57rem;
     }
 
     &--logo img {
       @include tablet {
+        display: none;
+      }
+      @include desktop {
         display: none;
       }
     }
