@@ -239,8 +239,9 @@
   @include tablet {
     padding-left: 36px;
     padding-right: 36px;
+    padding-top:2rem;
   }
-}
+
 
 &__title {
   margin: 0;
@@ -264,17 +265,20 @@
 img {
   width: 100%;
 }
-
+}
 /*footer section*/
 .footer {
   background-color: $primary-color-B;
 
   &__container {
     padding: 1rem;
+    padding-bottom: 2.8rem;
   }
   &__socialmedia {
     @include tablet {
       display: flex;
+      padding-top:0.5rem;
+      
     }
   }
 
@@ -296,14 +300,24 @@ img {
     font-size: 1rem;
 
     @include tablet {
-      margin: auto 0;
+      margin: 0 auto;
       padding-right: 1rem;
+      font-size:1.5rem;
+      height: 2.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
   &__icon {
     padding: 1rem 1rem 1rem 0rem;
+    @include tablet{
+      height:2.9rem;
+    }
   }
+    
+  
   h3 {
     font-weight: 600;
   }
@@ -324,7 +338,9 @@ img {
   a {
     text-decoration: none;
     color: $primary-color-W;
+    
   }
+
   &__copyright {
     padding-top: 1rem;
     color: $primary-color-W;
@@ -339,7 +355,7 @@ img {
       margin: 0;
     }
 
-    &--logo {
+    &--logo img{
       @include tablet {
         display: none;
       }
