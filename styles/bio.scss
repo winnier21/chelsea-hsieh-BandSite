@@ -1,0 +1,492 @@
+@use "partials/globals" as *;
+@use "partials/variables" as *;
+@use "partials/mixins" as *;
+@use "partials/typography" as *;
+
+/* tablet and desktop breakpoint mixins */ /*# sourceMappingURL=bio.css.map */
+
+/*Header and Nav section*/
+
+.header {
+  background-color: $primary-color-B;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+  color: $primary-color-W;
+
+  @include mobile {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0.7rem;
+  }
+  @include tablet {
+    height: 3rem;
+  }
+  @include desktop {
+    height: 3.5rem;
+    padding-left: 5rem;
+  }
+
+  &__nav-container {
+    display: flex;
+    padding: 0rem;
+    width: 100vw;
+    margin: 0;
+
+    @include tablet {
+      width: auto;
+      height: 3rem;
+      display: flex;
+    }
+
+    @include desktop {
+      width: auto;
+      height: 3rem;
+      display: flex;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      padding-right: 2rem;
+    }
+    @include desktop {
+      padding-right: 2rem;
+    }
+  }
+
+  &__nav-li {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    color: $primary-color-W;
+    list-style-type: none;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    height: 2rem;
+
+    @include tablet {
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
+    @include desktop {
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--item {
+    text-decoration: none;
+    color: $primary-color-W;
+  }
+
+  a {
+    color: $primary-color-W;
+    text-decoration: none;
+    list-style-type: none;
+    justify-content: space-between;
+    display: flex;
+    font-size: 0.59rem;
+  }
+  &__nav-li:hover {
+    border-bottom: 0.18rem solid $primary-color-W;
+    border-color: $primary-color-W;
+    font-weight: 700;
+
+    @include tablet {
+      height: 3rem;
+    }
+    @include desktop {
+      height: 3.5rem;
+    }
+  }
+}
+
+/*Hero section*/
+
+.hero {
+  background-image: url("/assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 8.34rem;
+
+  @include tablet {
+    height: 19rem;
+  }
+  @include desktop {
+    height: 26rem;
+  }
+
+  &__overlay {
+    background: rgba($primary-color-B, 0.5);
+    height: 100%;
+    display: flex;
+    padding: 1rem;
+  }
+  &__title {
+    color: $primary-color-W;
+    margin: 0px;
+    font-weight: 600;
+    align-self: center;
+
+    @include mobile {
+      font-size: 1rem;
+    }
+    @include tablet {
+      font-size: 2.2rem;
+      padding-left: 1rem;
+    }
+    @include desktop {
+      font-size: 2.2rem;
+      padding-left: 4rem;
+    }
+  }
+}
+/*About section*/
+
+.about {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &__header {
+    margin: 0;
+    font-weight: 600;
+    padding-bottom: 1rem;
+
+    @include mobile {
+      font-size: 1rem;
+    }
+    @include tablet {
+      padding-left: 1rem;
+      padding-top: 0.8rem;
+    }
+    @include desktop {
+      padding-left: 4rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @include tablet {
+      height: 12.5rem;
+    }
+    @include desktop {
+      height: 19rem;
+      padding-left: 8.5rem;
+      padding-right: 8.5rem;
+    }
+  }
+
+  &__content {
+    @include tablet {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &__quote {
+    font-size: 0.57rem;
+    line-height: 0.9rem;
+
+    @include tablet {
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      font-weight: 600;
+    }
+    @include desktop {
+      font-size: 0.7rem;
+      line-height: 1.3rem;
+      font-weight: 600;
+      padding-left: 8.5rem;
+      padding-right: 16.5rem;
+    }
+  }
+  span {
+    line-height: 1.2rem;
+
+    @include tablet {
+      font-weight: 400;
+      font-size: 0.65rem;
+      line-height: 2rem;
+    }
+    @include desktop {
+      font-weight: 400;
+      font-size: 0.5rem;
+      line-height: 2rem;
+    }
+  }
+}
+/*Bio Section*/
+
+.bio {
+  padding: 1rem;
+
+  @include tablet {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  @include desktop {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  &__title {
+    margin: 0;
+    @include mobile {
+      font-size: 0.6rem;
+      font-weight: 600;
+    }
+    @include tablet {
+      font-size: 1rem;
+      font-weight: 600;
+      padding-left: 1rem;
+    }
+    @include desktop {
+      font-size: 1rem;
+      font-weight: 400;
+      padding-left: 6.5rem;
+    }
+  }
+  &__container {
+    @include tablet {
+      display: flex;
+    }
+    @include desktop {
+      display: flex;
+      padding-left: 5.5rem;
+      padding-right: 6rem;
+    }
+  }
+  &__paragraph {
+    @include mobile {
+      font-size: 0.53rem;
+      font-weight: 400;
+      line-height: 0.8rem;
+    }
+    @include tablet {
+      padding-top: 0.6rem;
+      padding-left: 1rem;
+      font-size: 0.6rem;
+      padding-right: 0.359rem;
+      line-height: 0.9rem;
+    }
+    @include desktop {
+      padding-top: 0.6rem;
+      padding-left: 1rem;
+      font-size: 0.59rem;
+      line-height: 0.9rem;
+    }
+  }
+}
+/*Photo Gallery section*/
+.photo-gallery {
+  margin: 0;
+  background-color: $secondary-color-W;
+
+  @include mobile {
+    padding: 1rem 0.67rem 0.67rem 0.67rem;
+  }
+
+  @include tablet {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+  @include desktop {
+    padding: 2rem 5.3rem 1.5rem 6.3rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+
+    @include mobile {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    @include tablet {
+      font-weight: 600;
+      padding-bottom: 0.8rem;
+    }
+    @include desktop {
+      font-weight: 600;
+      padding-bottom: 0.8rem;
+    }
+  }
+  &__img {
+    margin: 0;
+
+    @include mobile {
+      padding-top: 0.5rem;
+    }
+
+    @include tablet {
+      width: 31.5%;
+      padding-top: 0.5rem;
+    }
+    @include desktop {
+      width: 32%;
+      padding-top: 0.5rem;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+/*footer section*/
+.footer {
+  background-color: $primary-color-B;
+
+  &__container {
+    padding: 1rem;
+
+    @include tablet {
+      padding-bottom: 2.8rem;
+    }
+    @include desktop {
+      padding-bottom: 2.8rem;
+      padding-left: 6.3rem;
+      padding-right: 4.3rem;
+    }
+  }
+  &__socialmedia {
+    @include tablet {
+      display: flex;
+      padding-top: 0.5rem;
+    }
+    @include desktop {
+      display: flex;
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @include tablet {
+      padding: 1rem;
+      flex-direction: column;
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 1;
+    }
+    @include desktop {
+      padding: 1rem;
+      flex-direction: column;
+      display: flex;
+      align-items: flex-end;
+      flex-grow: 1;
+    }
+  }
+  &__title {
+    color: $primary-color-W;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+
+    @include tablet {
+      margin: 0 auto;
+      padding-right: 1rem;
+      font-size: 1.5rem;
+      height: 2.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @include desktop {
+      margin: 0 auto;
+      padding-right: 1rem;
+      font-size: 1.5rem;
+      height: 2.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    padding: 1rem 1rem 1rem 0rem;
+    @include tablet {
+      height: 2.9rem;
+    }
+    @include desktop {
+      height: 2.9rem;
+    }
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+  &__information {
+    color: $primary-color-W;
+    font-size: 0.5rem;
+    font-weight: 400;
+    line-height: 0.9rem;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 1rem;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 70%;
+      font-size: 0.5rem;
+    }
+  }
+
+  &__agency {
+    p {
+      @include desktop {
+        font-size: 0.55rem;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-color-W;
+  }
+
+  &__copyright {
+    padding-top: 1rem;
+    color: $primary-color-W;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 0.45rem;
+      margin: 0;
+      font-size: 0.57rem;
+    }
+
+    &--logo img {
+      @include tablet {
+        display: none;
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+}
