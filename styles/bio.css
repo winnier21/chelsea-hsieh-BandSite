@@ -32,15 +32,15 @@ body {
 }
 
 /* tablet and desktop breakpoint mixins */ 
+/*Header and Nav section*/
 .header {
   background-color: #323232;
   display: flex;
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-  padding-top: 0.7rem;
   padding-left: 2rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media screen and (max-width: 767px) {
   .header {
@@ -48,6 +48,12 @@ body {
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+    padding-top: 0.7rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header {
+    height: 3rem;
   }
 }
 .header__nav-container {
@@ -59,24 +65,38 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .header__nav-container {
     width: auto;
+    height: 3rem;
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__logo {
+    padding-right: 2rem;
   }
 }
 .header__nav-li {
   width: 50%;
   display: flex;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
   list-style-type: none;
   padding: 0.5rem 1rem;
   box-sizing: border-box;
   height: 2rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__nav-li {
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .header--item {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .header a {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   list-style-type: none;
   justify-content: space-between;
@@ -84,12 +104,13 @@ body {
   font-size: 14px;
 }
 .header__nav-li:hover {
-  border-bottom: 0.18rem solid #FFFFFF;
-  border-color: #FFFFFF;
+  border-bottom: 0.18rem solid #ffffff;
+  border-color: #ffffff;
   font-weight: 700;
-  height: 2rem;
+  height: 3rem;
 }
 
+/*Hero section*/
 .hero {
   background-image: url("/assets/Images/hero-bio.jpg");
   background-position: center;
@@ -99,7 +120,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero {
-    height: 18rem;
+    height: 19rem;
   }
 }
 .hero__overlay {
@@ -109,7 +130,7 @@ body {
   padding: 1rem;
 }
 .hero__title {
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0px;
   font-weight: 600;
   align-self: center;
@@ -122,9 +143,11 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero__title {
     font-size: 2.2rem;
+    padding-left: 1rem;
   }
 }
 
+/*About section*/
 .about {
   padding-top: 1.5rem;
   padding-left: 1rem;
@@ -140,21 +163,46 @@ body {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about__header {
+    padding-left: 1rem;
+    padding-top: 0.8rem;
+  }
+}
 .about__img {
   width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .about__content {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .about__img {
+    height: 12.5rem;
   }
 }
-.about__paragraph {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about__content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.about__quote {
   font-size: 0.57rem;
   line-height: 0.9rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about__quote {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    font-weight: 600;
+  }
+}
 .about span {
   line-height: 1.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .about span {
+    font-weight: 400;
+    font-size: 0.65rem;
+    line-height: 2rem;
+  }
 }
 
 .bio {
@@ -198,7 +246,7 @@ body {
 .photo-gallery {
   margin: 0;
   padding: 1rem;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 .photo-gallery__container {
   display: flex;
@@ -272,7 +320,7 @@ body {
   }
 }
 .footer__title {
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   font-weight: 600;
   font-size: 1rem;
@@ -290,7 +338,7 @@ body {
   font-weight: 600;
 }
 .footer__information {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 0.5rem;
   font-weight: 400;
   line-height: 0.9rem;
@@ -305,11 +353,11 @@ body {
 }
 .footer a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .footer__copyright {
   padding-top: 1rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .footer__copyright h3 {
   font-size: 1rem;

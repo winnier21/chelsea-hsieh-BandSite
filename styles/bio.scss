@@ -5,13 +5,14 @@
 
 /* tablet and desktop breakpoint mixins */ /*# sourceMappingURL=bio.css.map */
 
+/*Header and Nav section*/
+
 .header {
   background-color: $primary-color-B;
   display: flex;
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-  padding-top: 0.7rem;
   padding-left: 2rem;
   color: $primary-color-W;
 
@@ -20,6 +21,10 @@
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
+    padding-top: 0.7rem;
+  }
+  @include tablet {
+    height: 3rem;
   }
 
   &__nav-container {
@@ -30,6 +35,14 @@
 
     @include tablet {
       width: auto;
+      height: 3rem;
+      display: flex;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      padding-right: 2rem;
     }
   }
 
@@ -42,6 +55,12 @@
     padding: 0.5rem 1rem;
     box-sizing: border-box;
     height: 2rem;
+
+    @include tablet {
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &--item {
@@ -61,9 +80,11 @@
     border-bottom: 0.18rem solid $primary-color-W;
     border-color: $primary-color-W;
     font-weight: 700;
-    height: 2rem;
+    height: 3rem;
   }
 }
+
+/*Hero section*/
 
 .hero {
   background-image: url("/assets/Images/hero-bio.jpg");
@@ -73,7 +94,7 @@
   height: 200px;
 
   @include tablet {
-    height: 18rem;
+    height: 19rem;
   }
 
   &__overlay {
@@ -93,9 +114,11 @@
     }
     @include tablet {
       font-size: 2.2rem;
+      padding-left: 1rem;
     }
   }
 }
+/*About section*/
 
 .about {
   padding-top: 1.5rem;
@@ -110,25 +133,45 @@
     @include mobile {
       font-size: 1rem;
     }
+    @include tablet {
+      padding-left: 1rem;
+      padding-top: 0.8rem;
+    }
   }
 
   &__img {
     width: 100%;
+
+    @include tablet {
+      height: 12.5rem;
+    }
   }
 
   &__content {
     @include tablet {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
   }
 
-  &__paragraph {
+  &__quote {
     font-size: 0.57rem;
     line-height: 0.9rem;
+
+    @include tablet {
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      font-weight: 600;
+    }
   }
   span {
     line-height: 1.2rem;
+
+    @include tablet {
+      font-weight: 400;
+      font-size: 0.65rem;
+      line-height: 2rem;
+    }
   }
 }
 
@@ -279,7 +322,7 @@
   }
   &__copyright {
     padding-top: 1rem;
-    color:$primary-color-W;
+    color: $primary-color-W;
 
     h3 {
       font-size: 1rem;
