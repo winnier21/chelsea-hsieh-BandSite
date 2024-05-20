@@ -291,6 +291,12 @@ html {
     padding-right: 3rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .bio {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
 .bio__title {
   margin: 0;
 }
@@ -307,9 +313,23 @@ html {
     padding-left: 1rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .bio__title {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 6.5rem;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .bio__container {
     display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio__container {
+    display: flex;
+    padding-left: 5.5rem;
+    padding-right: 6rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -325,6 +345,14 @@ html {
     padding-left: 1rem;
     font-size: 0.6rem;
     padding-right: 0.359rem;
+    line-height: 0.9rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .bio__paragraph {
+    padding-top: 0.6rem;
+    padding-left: 1rem;
+    font-size: 0.59rem;
     line-height: 0.9rem;
   }
 }
