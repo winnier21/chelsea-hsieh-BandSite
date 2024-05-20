@@ -168,6 +168,10 @@
       padding-left: 1rem;
       padding-top: 0.8rem;
     }
+    @include desktop {
+      padding-left: 4rem;
+      
+    }
   }
 
   &__img {
@@ -176,6 +180,11 @@
     @include tablet {
       height: 12.5rem;
     }
+    @include desktop {
+      height: 19rem;
+      padding-left:8.5rem;
+      padding-right:8.5rem;
+    }
   }
 
   &__content {
@@ -183,6 +192,7 @@
       padding-left: 3rem;
       padding-right: 3rem;
     }
+
   }
 
   &__quote {
@@ -194,6 +204,13 @@
       line-height: 1.3rem;
       font-weight: 600;
     }
+    @include desktop {
+      font-size: 0.7rem;
+      line-height: 1.3rem;
+      font-weight: 600;
+      padding-left:8.5rem;
+      padding-right:16.5rem;
+    }
   }
   span {
     line-height: 1.2rem;
@@ -201,6 +218,11 @@
     @include tablet {
       font-weight: 400;
       font-size: 0.65rem;
+      line-height: 2rem;
+    }
+    @include desktop {
+      font-weight: 400;
+      font-size: 0.5rem;
       line-height: 2rem;
     }
   }

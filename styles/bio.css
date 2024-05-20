@@ -217,12 +217,24 @@ html {
     padding-top: 0.8rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__header {
+    padding-left: 4rem;
+  }
+}
 .about__img {
   width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about__img {
     height: 12.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__img {
+    height: 19rem;
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -242,6 +254,15 @@ html {
     font-weight: 600;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about__quote {
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+    font-weight: 600;
+    padding-left: 8.5rem;
+    padding-right: 16.5rem;
+  }
+}
 .about span {
   line-height: 1.2rem;
 }
@@ -249,6 +270,13 @@ html {
   .about span {
     font-weight: 400;
     font-size: 0.65rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about span {
+    font-weight: 400;
+    font-size: 0.5rem;
     line-height: 2rem;
   }
 }
