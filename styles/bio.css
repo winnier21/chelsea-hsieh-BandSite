@@ -59,6 +59,12 @@ html {
     height: 3rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .header {
+    height: 3.5rem;
+    padding-left: 5rem;
+  }
+}
 .header__nav-container {
   display: flex;
   padding: 0rem;
@@ -72,7 +78,19 @@ html {
     display: flex;
   }
 }
+@media screen and (min-width: 1280px) {
+  .header__nav-container {
+    width: auto;
+    height: 3rem;
+    display: flex;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__logo {
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .header__logo {
     padding-right: 2rem;
   }
@@ -94,6 +112,13 @@ html {
     align-items: center;
   }
 }
+@media screen and (min-width: 1280px) {
+  .header__nav-li {
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .header--item {
   text-decoration: none;
   color: #ffffff;
@@ -104,7 +129,7 @@ html {
   list-style-type: none;
   justify-content: space-between;
   display: flex;
-  font-size: 14px;
+  font-size: 0.59rem;
 }
 .header__nav-li:hover {
   border-bottom: 0.18rem solid #ffffff;
@@ -114,6 +139,11 @@ html {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .header__nav-li:hover {
     height: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__nav-li:hover {
+    height: 3.5rem;
   }
 }
 
@@ -128,6 +158,11 @@ html {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero {
     height: 19rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 26rem;
   }
 }
 .hero__overlay {
@@ -148,6 +183,12 @@ html {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__title {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .hero__title {
     font-size: 2.2rem;
     padding-left: 1rem;

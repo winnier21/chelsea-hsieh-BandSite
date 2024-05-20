@@ -26,6 +26,10 @@
   @include tablet {
     height: 3rem;
   }
+  @include desktop {
+    height: 3.5rem;
+    padding-left: 5rem;
+  }
 
   &__nav-container {
     display: flex;
@@ -38,10 +42,19 @@
       height: 3rem;
       display: flex;
     }
+
+    @include desktop {
+      width: auto;
+      height: 3rem;
+      display: flex;
+    }
   }
 
   &__logo {
     @include tablet {
+      padding-right: 2rem;
+    }
+    @include desktop {
       padding-right: 2rem;
     }
   }
@@ -61,6 +74,11 @@
       justify-content: center;
       align-items: center;
     }
+    @include desktop {
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &--item {
@@ -74,7 +92,7 @@
     list-style-type: none;
     justify-content: space-between;
     display: flex;
-    font-size: 14px;
+    font-size: 0.59rem;
   }
   &__nav-li:hover {
     border-bottom: 0.18rem solid $primary-color-W;
@@ -83,6 +101,9 @@
 
     @include tablet {
       height: 3rem;
+    }
+    @include desktop {
+      height: 3.5rem;
     }
   }
 }
@@ -98,6 +119,9 @@
 
   @include tablet {
     height: 19rem;
+  }
+  @include desktop {
+    height: 26rem;
   }
 
   &__overlay {
@@ -116,6 +140,10 @@
       font-size: 1rem;
     }
     @include tablet {
+      font-size: 2.2rem;
+      padding-left: 1rem;
+    }
+    @include desktop {
       font-size: 2.2rem;
       padding-left: 1rem;
     }
@@ -225,9 +253,7 @@
   background-color: $secondary-color-W;
 
   @include mobile {
- 
     padding: 1rem 0.67rem 0.67rem 0.67rem;
-    
   }
 
   @include tablet {
@@ -238,7 +264,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -251,7 +277,7 @@
     }
     @include tablet {
       font-weight: 600;
-      padding-bottom:0.8rem;
+      padding-bottom: 0.8rem;
     }
   }
   &__img {
@@ -263,7 +289,7 @@
 
     @include tablet {
       width: 31.5%;
-      padding-top:0.5rem;
+      padding-top: 0.5rem;
     }
   }
   img {
