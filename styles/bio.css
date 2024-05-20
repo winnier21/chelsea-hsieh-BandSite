@@ -372,6 +372,11 @@ html {
     padding: 2rem 1.5rem 1.5rem 1.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .photo-gallery {
+    padding: 2rem 5.3rem 1.5rem 6.3rem;
+  }
+}
 .photo-gallery__container {
   display: flex;
   flex-wrap: wrap;
@@ -394,6 +399,12 @@ html {
     padding-bottom: 0.8rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .photo-gallery__title {
+    font-weight: 600;
+    padding-bottom: 0.8rem;
+  }
+}
 .photo-gallery__img {
   margin: 0;
 }
@@ -405,6 +416,12 @@ html {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__img {
     width: 31.5%;
+    padding-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .photo-gallery__img {
+    width: 32%;
     padding-top: 0.5rem;
   }
 }

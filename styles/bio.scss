@@ -301,6 +301,9 @@
   @include tablet {
     padding: 2rem 1.5rem 1.5rem 1.5rem;
   }
+  @include desktop {
+    padding: 2rem 5.3rem 1.5rem 6.3rem;
+  }
 
   &__container {
     display: flex;
@@ -321,6 +324,11 @@
       font-weight: 600;
       padding-bottom: 0.8rem;
     }
+    @include desktop {
+      font-weight: 600;
+      padding-bottom: 0.8rem;
+ 
+    }
   }
   &__img {
     margin: 0;
@@ -331,6 +339,10 @@
 
     @include tablet {
       width: 31.5%;
+      padding-top: 0.5rem;
+    }
+    @include desktop {
+      width: 32%;
       padding-top: 0.5rem;
     }
   }
