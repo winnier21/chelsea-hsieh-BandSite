@@ -18,9 +18,9 @@
 
   @include mobile {
     justify-content: center;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
     padding-top: 0.7rem;
   }
   @include tablet {
@@ -35,7 +35,7 @@
     display: flex;
     padding: 0rem;
     width: 100vw;
-    margin: 0px;
+    margin: 0;
 
     @include tablet {
       width: auto;
@@ -115,7 +115,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 8.34rem;
 
   @include tablet {
     height: 19rem;
@@ -452,14 +452,12 @@
     }
   }
 
-  &__agency{
-
-    p{
-    @include desktop{
-      font-size:0.55rem;
-
+  &__agency {
+    p {
+      @include desktop {
+        font-size: 0.55rem;
+      }
     }
-  }
   }
 
   a {
