@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("/assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("/assets/Font/AvenirNextLTProBold.ttf") format("truetype"), url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
@@ -582,4 +581,3 @@ html {
     display: none;
   }
 }/*# sourceMappingURL=bio.css.map */
-
