@@ -357,6 +357,97 @@ html {
   }
 }
 
+/*comment section*/
+.comment__header {
+  font-weight: 600;
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+}
+.comment__form--container {
+  display: flex;
+  padding: 1rem;
+}
+.comment__form--items {
+  border-bottom: 1px solid #afafaf;
+  display: flex;
+}
+
+.avatar-container {
+  overflow: hidden;
+}
+.avatar-container .avatar-image {
+  background-image: url(/assets/Images/Mohan-muruge.jpg);
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 75px;
+}
+
+.userinput {
+  width: 180px;
+}
+
+.input-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.input-container .comment-button {
+  background-color: #323232;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 0.2rem;
+  border: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-family: "AvenirNext LT Pro";
+}
+.input-container label {
+  font-size: 0.4rem;
+  text-transform: uppercase;
+  color: #afafaf;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.input-container input {
+  padding: 0.5rem;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #e1e1e1;
+  background-color: #fafafa;
+}
+.input-container textarea {
+  padding: 0.5rem;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #e1e1e1;
+  background-color: #fafafa;
+}
+.input-container input::-moz-placeholder {
+  font-size: 0.7rem;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+}
+.input-container input::placeholder {
+  font-size: 0.7rem;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+}
+.input-container textarea::-moz-placeholder {
+  font-size: 0.7rem;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+}
+.input-container textarea::placeholder {
+  font-size: 0.7rem;
+  font-family: "AvenirNext LT Pro";
+  font-weight: 400;
+}
+
 /*Photo Gallery section*/
 .photo-gallery {
   margin: 0;
