@@ -375,6 +375,13 @@ html {
     padding-bottom: 0.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment__header {
+    font-size: 1.5rem;
+    padding-left: 6rem;
+    padding-top: 2rem;
+  }
+}
 .comment__form--items {
   border-bottom: 1px solid #e1e1e1;
   display: flex;
@@ -385,6 +392,11 @@ html {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .comment__form--items {
     margin: 1rem 3.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__form--items {
+    margin: 2rem 17rem;
   }
 }
 .comment-name {
@@ -477,6 +489,16 @@ html {
     padding: 0.5rem 1.5rem;
     align-self: end;
     display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .input-container .comment-button {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    align-self: end;
+    display: flex;
+    margin: 0.5rem 0rem;
   }
 }
 .input-container label {
