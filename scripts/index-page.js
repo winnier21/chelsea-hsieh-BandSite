@@ -1,61 +1,56 @@
 const comment = [
-    {
-        name: "Victor Pinto",
-        timestamp: "11/02/2023",
-        message: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-    },
-    {
-        name: "Christina Cabrera",
-        timestamp: "10/28/2023",
-        message: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-    },
-    {
-        name: "Isaac Tadesse",
-        timestamp: "10/20/2023",
-        message: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-    },
-]
-
+  {
+    name: "Victor Pinto",
+    timestamp: "11/02/2023",
+    message:
+      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+  },
+  {
+    name: "Christina Cabrera",
+    timestamp: "10/28/2023",
+    message:
+      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+  },
+  {
+    name: "Isaac Tadesse",
+    timestamp: "10/20/2023",
+    message:
+      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+  },
+];
 
 const commentContainer = document.querySelector(".comment-container");
 const commentForm = document.getElementById("comment-form");
 const nameInput = document.getElementById("name");
 const commentTextInput = document.getElementById("comment-text");
 
-//const placeholderImagePath = "path_to_placeholder_image";
+const commentList = document.createElement("div");
+function renderAllComments(comment) {
+  commentList.innerHTML = "";
+  comment.forEach(displayComment);
+}
 
-// const allComments = document.createElement("div");
-// allComments.classList.add("comment-allcomment");
-
-// function clearAllComments(){
-//   allComments.innterText= "";
-  
-// }
-
-function displayComment(comment, prepend = false) {
-
+function displayComment(comment) {
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
 
   const commentAvatarWrapper = document.createElement("div");
   commentAvatarWrapper.classList.add("comment-avatarWrapper");
- 
+
   const commentAvatar = document.createElement("div");
   commentAvatar.classList.add("comment-avatar");
   commentAvatarWrapper.appendChild(commentAvatar);
 
-  const commentWrapper= document.createElement("div");
+  const commentWrapper = document.createElement("div");
   commentWrapper.classList.add("comment-wrapper");
 
   const commentWrapperTop = document.createElement("div");
   commentWrapperTop.classList.add("comment-wrapper__top");
-  
 
   const commentName = document.createElement("span");
   commentName.classList.add("comment-name");
   commentName.textContent = comment.name;
   commentWrapperTop.appendChild(commentName);
-
 
   const commentTimestamp = document.createElement("span");
   commentTimestamp.classList.add("comment-timestamp");
@@ -68,24 +63,14 @@ function displayComment(comment, prepend = false) {
   commentText.textContent = comment.message;
   commentWrapper.appendChild(commentText);
 
- 
   commentElement.appendChild(commentAvatarWrapper);
   commentElement.appendChild(commentWrapper);
 
-  if (prepend) {
-    commentContainer.insertBefore(commentElement, commentContainer.firstChild);
-} else {
-    commentContainer.appendChild(commentElement);
+  commentList.appendChild(commentElement);
+  commentContainer.appendChild(commentList);
+
+  commentElement.classList.add("comment__form--items");
 }
-}
-
-//   allComments.appendChild(commentElement);
-//   commentContainer.appendChild(allComments);
-
-commentElement.classList.add("comment__form--items");
-
-
-// }
 
 function clearCommentForm() {
   nameInput.value = "";
@@ -105,15 +90,9 @@ commentForm.addEventListener("submit", function (e) {
       message,
     };
 
-    
     comment.unshift(newComment);
-    displayComment(newComment, true);
+    renderAllComments(comment);
     clearCommentForm();
-  
-    
   }
-  
-  
 });
 comment.forEach(displayComment);
-
