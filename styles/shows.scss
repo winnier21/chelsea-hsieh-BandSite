@@ -28,5 +28,30 @@
             height:100px;
         }
     }
+}
 
+.shows__list{
+
+    h3{
+        color:$primary-color-S;
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
+    .datefield{
+        font-weight: 600;
+    }
+
+    .desktop__heading{
+        @include mobile{
+            display: none;
+        }
+    }
+    .buyTickets{
+        background-color: $primary-color-B;
+        color:$primary-color-W;
+        padding: 0.5rem;
+        border-radius: 5px;
+        width: 100%;
+        font-family: "AvenirNext LT Pro";
+    }
 }

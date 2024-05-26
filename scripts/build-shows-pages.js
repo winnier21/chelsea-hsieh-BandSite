@@ -60,7 +60,7 @@ function loadshows (shows){
 
     const buyButton = document.createElement("button");
     buyButton.classList.add("buyTickets");
-    buyButton.innerText = "Buy Tickets";
+    buyButton.innerText = "BUY TICKETS";
     showList.appendChild(buyButton);
 }
 
