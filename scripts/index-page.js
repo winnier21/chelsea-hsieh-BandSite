@@ -16,15 +16,24 @@ const comment = [
     },
 ]
 
+
 const commentContainer = document.querySelector(".comment-container");
 const commentForm = document.getElementById("comment-form");
 const nameInput = document.getElementById("name");
 const commentTextInput = document.getElementById("comment-text");
 
-const placeholderImagePath = "path_to_placeholder_image";
+//const placeholderImagePath = "path_to_placeholder_image";
 
+// const allComments = document.createElement("div");
+// allComments.classList.add("comment-allcomment");
 
-function displayComment(comment) {
+// function clearAllComments(){
+//   allComments.innterText= "";
+  
+// }
+
+function displayComment(comment, prepend = false) {
+
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
 
@@ -63,9 +72,20 @@ function displayComment(comment) {
   commentElement.appendChild(commentAvatarWrapper);
   commentElement.appendChild(commentWrapper);
 
-  commentContainer.appendChild(commentElement);
-  commentElement.classList.add("comment__form--items");
+  if (prepend) {
+    commentContainer.insertBefore(commentElement, commentContainer.firstChild);
+} else {
+    commentContainer.appendChild(commentElement);
 }
+}
+
+//   allComments.appendChild(commentElement);
+//   commentContainer.appendChild(allComments);
+
+commentElement.classList.add("comment__form--items");
+
+
+// }
 
 function clearCommentForm() {
   nameInput.value = "";
@@ -85,10 +105,15 @@ commentForm.addEventListener("submit", function (e) {
       message,
     };
 
-    comment.push(newComment);
-    displayComment(newComment);
+    
+    comment.unshift(newComment);
+    displayComment(newComment, true);
     clearCommentForm();
+  
+    
   }
+  
+  
 });
-
 comment.forEach(displayComment);
+

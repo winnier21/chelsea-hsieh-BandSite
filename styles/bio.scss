@@ -337,15 +337,23 @@
     display: flex;
   }
   p {
+    min-width:100%;
     font-size: 0.5rem;
     line-height: 0.8rem;
     @include tablet{
       line-height: 1rem;
       font-size:0.6rem;
+      min-width:100%;
+    }
+    @include desktop{
+      line-height: 1rem;
+      font-size:0.6rem;
+      min-width:100%;
     }
   }
   &-wrapper {
     padding-left: 0.5rem;
+    width: 100%;
   }
   &-wrapper__top {
     display: flex;

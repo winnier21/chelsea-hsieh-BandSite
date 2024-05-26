@@ -1,1 +1,60 @@
-/*# sourceMappingURL=shows.css.map */
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("/assets/Font/AvenirNextLTProBold.ttf") format("truetype"), url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("/assets/Font/AvenirNextLTProDemi.ttf") format("truetype"), url("AvenirNextLTPro-Demi.woff2") format("woff2"), url("AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("/assets/Font/AvenirNextLTPro.ttf") format("truetype"), url("AvenirNextLTPro-Regular.woff2") format("woff2"), url("AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  padding: 0px;
+  margin: 0px;
+  font-family: "AvenirNext LT Pro";
+}
+
+html {
+  font-size: 24px;
+}
+
+.hero {
+  background-image: url("/assets/Images/hero-shows.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 11.2rem;
+}
+.hero__title {
+  padding-top: 0.5rem;
+  width: 80%;
+}
+.hero__overlay {
+  display: block;
+  padding: 1rem;
+}
+.hero__overlay .hero-show__heading {
+  color: #ffffff;
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+.hero__overlay .hero-show__music {
+  width: 100%;
+  height: 100px;
+}/*# sourceMappingURL=shows.css.map */
