@@ -41,9 +41,22 @@ html {
   background-repeat: no-repeat;
   height: 11.2rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero {
+    height: 20rem;
+  }
+}
 .hero__title {
   padding-top: 0.5rem;
   width: 80%;
+  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__title {
+    font-size: 2.3rem;
+    width: 75%;
+    padding-bottom: 1.5rem;
+  }
 }
 .hero__overlay {
   display: block;
@@ -54,9 +67,22 @@ html {
   font-size: 0.5rem;
   font-weight: 400;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__overlay .hero-show__heading {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+}
 .hero__overlay .hero-show__music {
   width: 100%;
   height: 100px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__overlay .hero-show__music {
+    margin-left: 1rem;
+    width: 50%;
+    height: 35%;
+  }
 }
 
 .shows {
@@ -67,6 +93,13 @@ html {
   padding: 0rem 1rem;
   padding-bottom: 0.5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows .each-event {
+    display: flex;
+    margin: 0rem 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
 .shows__header {
   font-weight: 600;
   font-size: 1rem;
@@ -74,31 +107,76 @@ html {
   padding-bottom: 0.3rem;
   padding-left: 1rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__header {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+}
+.shows__list .table__headers {
+  display: flex;
+  padding-left: 2rem;
+}
 .shows__list h3 {
   color: #afafaf;
   font-weight: 400;
   font-size: 0.4rem;
   padding-top: 0.3rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list h3 {
+    display: none;
+  }
+}
 .shows__list .datefield {
   font-weight: 600;
   margin: 0;
   font-size: 0.6em;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list .datefield {
+    width: 7rem;
+    align-self: center;
+  }
 }
 .shows__list .venuefield {
   font-weight: 400;
   margin: 0;
   font-size: 0.6em;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list .venuefield {
+    width: 7rem;
+    align-self: center;
+  }
+}
 .shows__list .locationfield {
   font-weight: 400;
   margin: 0;
   font-size: 0.6em;
-  padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 767px) {
+  .shows__list .locationfield {
+    padding-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list .locationfield {
+    width: 7rem;
+    align-self: center;
+  }
 }
 @media screen and (max-width: 767px) {
   .shows__list .desktop__heading {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list .desktop__heading {
+    display: flex;
+    width: 7rem;
+    font-size: 0.5rem;
   }
 }
 .shows__list .buyTickets {
@@ -109,4 +187,10 @@ html {
   border-radius: 4px;
   width: 100%;
   font-family: "AvenirNext LT Pro";
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list .buyTickets {
+    width: 22%;
+    padding-left: 0.5rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
