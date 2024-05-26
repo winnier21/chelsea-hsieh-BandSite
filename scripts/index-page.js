@@ -28,35 +28,44 @@ function displayComment(comment) {
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
 
-  const commentHeader = document.createElement("div");
-  commentHeader.classList.add("comment-header");
-
+  const commentAvatarWrapper = document.createElement("div");
+  commentAvatarWrapper.classList.add("comment-avatarWrapper");
+ 
   const commentAvatar = document.createElement("div");
   commentAvatar.classList.add("comment-avatar");
   commentAvatar.style.backgroundColor = "#E5E5E5"; 
   commentAvatar.style.width = "36px"; 
   commentAvatar.style.height = "36px"; 
   commentAvatar.style.borderRadius = "50%"; 
-  commentHeader.appendChild(commentAvatar);
+  commentAvatarWrapper.appendChild(commentAvatar);
 
+  const commentWrapper= document.createElement("div");
+  commentWrapper.classList.add("comment-wrapper");
+
+  const commentWrapperTop = document.createElement("div");
+  commentWrapperTop.classList.add("comment-wrapper__top");
+  
 
   const commentName = document.createElement("span");
   commentName.classList.add("comment-name");
   commentName.textContent = comment.name;
-  commentHeader.appendChild(commentName);
+  commentWrapperTop.appendChild(commentName);
 
 
   const commentTimestamp = document.createElement("span");
   commentTimestamp.classList.add("comment-timestamp");
   commentTimestamp.textContent = comment.timestamp;
-  commentHeader.appendChild(commentTimestamp);
+  commentWrapperTop.appendChild(commentTimestamp);
+  commentWrapper.appendChild(commentWrapperTop);
 
   const commentText = document.createElement("p");
   commentText.classList.add("comment-text");
   commentText.textContent = comment.message;
+  commentWrapper.appendChild(commentText);
 
-  commentElement.appendChild(commentHeader);
-  commentElement.appendChild(commentText);
+ 
+  commentElement.appendChild(commentAvatarWrapper);
+  commentElement.appendChild(commentWrapper);
 
   commentContainer.appendChild(commentElement);
   commentElement.classList.add("comment__form--items");
