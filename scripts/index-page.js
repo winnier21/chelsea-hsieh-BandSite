@@ -33,10 +33,6 @@ function displayComment(comment) {
  
   const commentAvatar = document.createElement("div");
   commentAvatar.classList.add("comment-avatar");
-  commentAvatar.style.backgroundColor = "#E5E5E5"; 
-  commentAvatar.style.width = "36px"; 
-  commentAvatar.style.height = "36px"; 
-  commentAvatar.style.borderRadius = "50%"; 
   commentAvatarWrapper.appendChild(commentAvatar);
 
   const commentWrapper= document.createElement("div");

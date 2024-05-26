@@ -290,7 +290,7 @@
 
 /*comment section*/
 .comment {
-  padding:0.5rem;
+  padding: 0.5rem;
 
   &__header {
     font-weight: 600;
@@ -298,71 +298,94 @@
     padding-top: 0.5rem;
     margin: 0;
     font-size: 1rem;
-  }
 
-  &__form--container {
-    display: flex;
+    @include tablet {
+      font-size: 1.5rem;
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
 
   &__form--items {
     border-bottom: 1px solid $secondary-color-S;
     display: flex;
-    margin:1rem;
-    margin-bottom:0;
-    padding:0;
-    
+    margin: 1rem;
+    margin-bottom: 0;
+    padding: 0;
+
+    @include tablet {
+     margin:1rem 3.5rem; 
+    }
   }
 
-  &-name{
+  &-name {
     font-size: 0.6rem;
     font-weight: 600;
-   
   }
-  &-timestamp{
+  &-timestamp {
     font-size: 0.6rem;
     font-weight: 400;
     color: $primary-color-S;
     display: flex;
-
-   
   }
-  p{
-    font-size:0.5rem;
+  p {
+    font-size: 0.5rem;
     line-height: 0.8rem;
+    @include tablet{
+      line-height: 1rem;
+      font-size:0.6rem;
+    }
   }
-  &-wrapper{
-    padding-left:0.5rem;
+  &-wrapper {
+    padding-left: 0.5rem;
   }
-  &-wrapper__top{
+  &-wrapper__top {
     display: flex;
     justify-content: space-between;
+  }
 
+  &-avatar{
+  background-color:$secondary-color-S;
+  width: 1.5rem; 
+  height: 1.5rem; 
+  border-radius: 50%; 
 
+  @include tablet{
+    width: 2rem;
+    height:2rem;
+  }
   }
 }
 
 .avatar-container {
-
   .avatar-image {
     background-image: url(/assets/Images/Mohan-muruge.jpg);
     background-size: cover;
     width: 1.5rem;
     height: 1.5rem;
-    margin-top:0.8rem;
+    margin-top: 0.8rem;
     border-radius: 75px;
+
+    @include tablet{
+      width: 2rem;
+    height: 2rem;
+    }
   }
 }
 .userinput {
-  width:100%;
-  margin-left:0.5rem;
-  
+  width: 100%;
+  margin-left: 0.5rem;
 }
 .input-container {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5rem;
-    width: 100;
+  width: 100;
+
+  @include tablet{
+    padding-bottom: 0.5rem;
+  }
 
   .comment-button {
     background-color: $primary-color-B;
@@ -374,6 +397,13 @@
     text-transform: uppercase;
     font-size: 0.6rem;
     font-family: "AvenirNext LT Pro";
+
+    @include tablet {
+      width: fit-content;
+      padding: 0.5rem 1.5rem;
+      align-self: end;
+      display: flex;
+    }
   }
   label {
     font-size: 0.4rem;
@@ -381,9 +411,13 @@
     color: $primary-color-S;
     font-weight: 600;
     margin-bottom: 0.25rem;
+
+    @include tablet{
+      font-size: 0.5rem;
+    }
   }
   input {
-    width:100%;
+    width: 100%;
     padding: 0.3rem;
     border-style: solid;
     border-radius: 5px;
@@ -391,7 +425,7 @@
     background-color: $secondary-color-W;
   }
   textarea {
-    width:100%;
+    width: 100%;
     padding: 0.3rem;
     border-style: solid;
     border-radius: 5px;
@@ -474,7 +508,7 @@
 }
 /*footer section*/
 .footer {
-  margin-top:0.8rem;
+  margin-top: 0.8rem;
   background-color: $primary-color-B;
 
   &__container {

@@ -368,8 +368,12 @@ html {
   margin: 0;
   font-size: 1rem;
 }
-.comment__form--container {
-  display: flex;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment__header {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 .comment__form--items {
   border-bottom: 1px solid #e1e1e1;
@@ -377,6 +381,11 @@ html {
   margin: 1rem;
   margin-bottom: 0;
   padding: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment__form--items {
+    margin: 1rem 3.5rem;
+  }
 }
 .comment-name {
   font-size: 0.6rem;
@@ -392,12 +401,30 @@ html {
   font-size: 0.5rem;
   line-height: 0.8rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment p {
+    line-height: 1rem;
+    font-size: 0.6rem;
+  }
+}
 .comment-wrapper {
   padding-left: 0.5rem;
 }
 .comment-wrapper__top {
   display: flex;
   justify-content: space-between;
+}
+.comment-avatar {
+  background-color: #e1e1e1;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .comment-avatar {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .avatar-container .avatar-image {
@@ -407,6 +434,12 @@ html {
   height: 1.5rem;
   margin-top: 0.8rem;
   border-radius: 75px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .avatar-container .avatar-image {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .userinput {
@@ -421,6 +454,11 @@ html {
   margin-bottom: 0.5rem;
   width: 100;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .input-container {
+    padding-bottom: 0.5rem;
+  }
+}
 .input-container .comment-button {
   background-color: #323232;
   color: #ffffff;
@@ -432,12 +470,26 @@ html {
   font-size: 0.6rem;
   font-family: "AvenirNext LT Pro";
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .input-container .comment-button {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    align-self: end;
+    display: flex;
+  }
+}
 .input-container label {
   font-size: 0.4rem;
   text-transform: uppercase;
   color: #afafaf;
   font-weight: 600;
   margin-bottom: 0.25rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .input-container label {
+    font-size: 0.5rem;
+  }
 }
 .input-container input {
   width: 100%;
