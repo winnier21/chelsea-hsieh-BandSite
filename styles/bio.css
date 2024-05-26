@@ -491,6 +491,7 @@ html {
   text-transform: uppercase;
   font-size: 0.6rem;
   font-family: "AvenirNext LT Pro";
+  height: 1.67rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .input-container .comment-button {
@@ -525,20 +526,49 @@ html {
 }
 .input-container input {
   width: 100%;
-  padding: 0.3rem;
+  min-height: 1.5rem;
   border-style: solid;
   border-radius: 5px;
   border-color: #e1e1e1;
   background-color: #fafafa;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .input-container input {
+    min-height: 2rem;
+    padding: 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .input-container input {
+    min-height: 2rem;
+    padding: 0.75rem;
+  }
+}
+.input-container input:focus {
+  border: 1px solid #323232;
 }
 .input-container textarea {
   width: 100%;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 4px;
   border-color: #e1e1e1;
   background-color: #fafafa;
   min-height: 4rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .input-container textarea {
+    padding: 0.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .input-container textarea {
+    padding: 0.75rem;
+  }
+}
+.input-container textarea:focus {
+  border: 1px solid #323232;
 }
 .input-container input::-moz-placeholder {
   font-size: 0.6rem;

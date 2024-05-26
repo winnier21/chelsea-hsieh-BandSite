@@ -59,13 +59,42 @@ html {
   height: 100px;
 }
 
+.shows {
+  padding: 1rem 0rem;
+}
+.shows .each-event {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0rem 1rem;
+  padding-bottom: 0.5rem;
+}
+.shows__header {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 0.3rem;
+  padding-left: 1rem;
+}
 .shows__list h3 {
   color: #afafaf;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.4rem;
+  padding-top: 0.3rem;
 }
 .shows__list .datefield {
   font-weight: 600;
+  margin: 0;
+  font-size: 0.6em;
+}
+.shows__list .venuefield {
+  font-weight: 400;
+  margin: 0;
+  font-size: 0.6em;
+}
+.shows__list .locationfield {
+  font-weight: 400;
+  margin: 0;
+  font-size: 0.6em;
+  padding-bottom: 0.5rem;
 }
 @media screen and (max-width: 767px) {
   .shows__list .desktop__heading {
@@ -73,10 +102,11 @@ html {
   }
 }
 .shows__list .buyTickets {
+  font-size: 0.6rem;
   background-color: #323232;
   color: #ffffff;
-  padding: 0.5rem;
-  border-radius: 5px;
+  padding: 0.35rem;
+  border-radius: 4px;
   width: 100%;
   font-family: "AvenirNext LT Pro";
 }/*# sourceMappingURL=shows.css.map */

@@ -34,34 +34,42 @@ const shows = [
 const showList = document.querySelector(".shows__list");
 
 function loadshows (shows){
+  const eachShow = document.createElement("div");
     const dateHead = document.createElement("h3");
     dateHead.innerText = "DATE";
-    showList.appendChild(dateHead);
+    eachShow.appendChild(dateHead);
+    
     const dateEl = document.createElement ('p');
     dateEl.classList.add ("datefield");
     dateEl.textContent = shows.date;
-    showList.appendChild(dateEl);
+    eachShow.appendChild(dateEl);
 
     const venueHead = document.createElement("h3");
     venueHead.innerText = "VENUE";
-    showList.appendChild(venueHead);
+    eachShow.appendChild(venueHead);
+    
     const venueEl = document.createElement ('p');
     venueEl.classList.add ("venuefield");
     venueEl.textContent = shows.venue;
-    showList.appendChild(venueEl);
+    eachShow.appendChild(venueEl);
 
     const locationHead = document.createElement("h3");
     locationHead.innerText = "LOCATION";
-    showList.appendChild(locationHead);
+    eachShow.appendChild(locationHead);
+    
     const locationEl = document.createElement ('p');
     locationEl.classList.add ("locationfield");
     locationEl.textContent = shows.location;
-    showList.appendChild(locationEl);
+    eachShow.appendChild(locationEl);
 
     const buyButton = document.createElement("button");
     buyButton.classList.add("buyTickets");
     buyButton.innerText = "BUY TICKETS";
-    showList.appendChild(buyButton);
+    eachShow.appendChild(buyButton);
+
+    
+    eachShow.classList.add("each-event");
+    showList.appendChild(eachShow);
 }
 
 shows.forEach(loadshows);

@@ -10,6 +10,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 11.2rem;
+
     &__title{
         padding-top:0.5rem;
         width: 80%;
@@ -30,28 +31,67 @@
     }
 }
 
-.shows__list{
+.shows{
+    padding:1rem 0rem;
 
-    h3{
-        color:$primary-color-S;
-        font-weight: 400;
-        font-size: 0.8rem;
+    .each-event{
+        border-bottom: 1px solid $secondary-color-S;
+        padding:0rem 1rem;
+        padding-bottom: 0.5rem;
+
+
     }
-    .datefield{
+
+    &__header{
         font-weight: 600;
+        font-size:1rem;
+        margin:0;
+        padding-bottom: 0.3rem;
+        padding-left:1rem;
+        
     }
+    &__list{
 
-    .desktop__heading{
-        @include mobile{
-            display: none;
+        h3{
+            color:$primary-color-S;
+            font-weight: 400;
+            font-size: 0.4rem;
+            padding-top: 0.3rem;
         }
+        .datefield{
+            font-weight: 600;
+            margin:0;
+            font-size: 0.6em;;
+           
+        }
+        .venuefield{
+            font-weight: 400;
+            margin:0;
+            font-size: 0.6em;;
+        }
+        .locationfield{
+            font-weight: 400;
+            margin:0;
+            font-size: 0.6em;
+            padding-bottom: 0.5rem;
+        }
+    
+        .desktop__heading{
+            @include mobile{
+                display: none;
+            }
+        }
+        .buyTickets{
+            
+            font-size: 0.6rem;
+            background-color: $primary-color-B;
+            color:$primary-color-W;
+            padding: 0.35rem;
+            border-radius: 4px;
+            width: 100%;
+            font-family: "AvenirNext LT Pro";
+        }
+        
     }
-    .buyTickets{
-        background-color: $primary-color-B;
-        color:$primary-color-W;
-        padding: 0.5rem;
-        border-radius: 5px;
-        width: 100%;
-        font-family: "AvenirNext LT Pro";
-    }
+    
 }
