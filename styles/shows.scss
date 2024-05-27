@@ -35,6 +35,11 @@
 
   &__overlay {
     padding: 1rem;
+    display: block;
+    
+    @include desktop {
+      display: flex;
+    }
 
     div {
       @include desktop {
@@ -42,9 +47,6 @@
       }
     }
 
-    @include desktop {
-      display: flex;
-    }
 
     .hero-show__heading {
       color: $primary-color-W;
@@ -80,6 +82,8 @@
 
 .shows {
   padding: 1rem 0rem;
+
+ 
   @include desktop {
     display: flex;
   }
@@ -88,6 +92,8 @@
     border-bottom: 1px solid $secondary-color-S;
     padding: 0rem 1rem;
     padding-bottom: 0.5rem;
+    display: block;
+
 
     @include tablet {
       display: flex;
