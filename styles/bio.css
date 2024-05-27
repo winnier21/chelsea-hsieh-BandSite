@@ -512,6 +512,9 @@ html {
     margin: 0.5rem 0rem;
   }
 }
+.input-container .comment-button:hover {
+  background-color: #000000;
+}
 .input-container label {
   font-size: 0.4rem;
   text-transform: uppercase;

@@ -34,7 +34,7 @@ const shows = [
 const showList = document.querySelector(".shows__list");
 
 function loadshows (shows){
-  const eachShow = document.createElement("div");
+  const eachShow = document.createElement("tr");
     const dateHead = document.createElement("h3");
     dateHead.innerText = "DATE";
     eachShow.appendChild(dateHead);

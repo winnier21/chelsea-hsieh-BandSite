@@ -429,6 +429,9 @@
       margin: 0.5rem 0rem;
     }
   }
+  .comment-button:hover{
+    background-color: $secondary-color-B;
+  }
   label {
     font-size: 0.4rem;
     text-transform: uppercase;

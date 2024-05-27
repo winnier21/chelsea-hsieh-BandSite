@@ -46,6 +46,11 @@ html {
     height: 20rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 25.5rem;
+  }
+}
 .hero__title {
   padding-top: 0.5rem;
   width: 80%;
@@ -58,9 +63,24 @@ html {
     padding-bottom: 1.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    font-size: 2.3rem;
+    width: 75%;
+  }
+}
 .hero__overlay {
-  display: block;
   padding: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .hero__overlay div {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__overlay {
+    display: flex;
+  }
 }
 .hero__overlay .hero-show__heading {
   color: #ffffff;
@@ -71,6 +91,13 @@ html {
   .hero__overlay .hero-show__heading {
     font-size: 1rem;
     padding-left: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__overlay .hero-show__heading {
+    font-size: 1rem;
+    padding-left: 4rem;
+    padding-top: 5.5rem;
   }
 }
 .hero__overlay .hero-show__music {
@@ -84,9 +111,21 @@ html {
     height: 35%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__overlay .hero-show__music {
+    align-self: center;
+    width: 32%;
+    height: 25%;
+  }
+}
 
 .shows {
   padding: 1rem 0rem;
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    display: flex;
+  }
 }
 .shows .each-event {
   border-bottom: 1px solid #e1e1e1;
@@ -100,6 +139,16 @@ html {
     padding: 0.5rem 1rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .shows .each-event {
+    display: flex;
+    margin: 0rem 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+.shows .each-event:hover {
+  background-color: #fafafa;
+}
 .shows__header {
   font-weight: 600;
   font-size: 1rem;
@@ -112,6 +161,12 @@ html {
     font-size: 1.5rem;
     padding-top: 1rem;
     padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__header {
+    font-size: 1.5rem;
+    padding: 1rem 5rem 0rem 5rem;
   }
 }
 .shows__list .table__headers {
@@ -129,6 +184,11 @@ html {
     display: none;
   }
 }
+@media screen and (min-width: 1280px) {
+  .shows__list h3 {
+    display: none;
+  }
+}
 .shows__list .datefield {
   font-weight: 600;
   margin: 0;
@@ -140,12 +200,24 @@ html {
     align-self: center;
   }
 }
+@media screen and (min-width: 1280px) {
+  .shows__list .datefield {
+    width: 9.5rem;
+    align-self: center;
+  }
+}
 .shows__list .venuefield {
   font-weight: 400;
   margin: 0;
   font-size: 0.6em;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list .venuefield {
+    width: 7rem;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 1280px) {
   .shows__list .venuefield {
     width: 7rem;
     align-self: center;
@@ -167,6 +239,12 @@ html {
     align-self: center;
   }
 }
+@media screen and (min-width: 1280px) {
+  .shows__list .locationfield {
+    align-self: center;
+    width: 8rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .shows__list .desktop__heading {
     display: none;
@@ -179,6 +257,18 @@ html {
     font-size: 0.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .shows__list .desktop__heading {
+    display: flex;
+    font-size: 0.5rem;
+  }
+}
+.shows__list #dateid {
+  width: 9rem;
+}
+.shows__list #venueid {
+  width: 6.6rem;
+}
 .shows__list .buyTickets {
   font-size: 0.6rem;
   background-color: #323232;
@@ -189,6 +279,12 @@ html {
   font-family: "AvenirNext LT Pro";
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list .buyTickets {
+    width: 22%;
+    padding-left: 0.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .shows__list .buyTickets {
     width: 22%;
     padding-left: 0.5rem;
