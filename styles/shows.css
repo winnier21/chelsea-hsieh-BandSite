@@ -149,7 +149,7 @@ html {
   }
 }
 .shows .each-event:hover {
-  background-color: #fafafa;
+  background-color: #e1e1e1;
 }
 .shows__header {
   font-weight: 600;

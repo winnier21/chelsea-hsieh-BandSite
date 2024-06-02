@@ -13,99 +13,93 @@
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-  padding-left: 2rem;
   color: $primary-color-W;
+  justify-content: center;
+  padding: 0 0 0.7rem 0;
 
-  @include mobile {
-    justify-content: center;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-top: 0.7rem;
+@include tablet {
+  height: 3rem;
+}
+@include desktop {
+  height: 3.5rem;
+  padding-left: 5rem;
+}
+
+&__nav-container {
+  display: flex;
+  padding: 0rem;
+  width: 100vw;
+  margin: 0;
+
+  @include tablet {
+    width: auto;
+    height: 3rem;
+    display: flex;
   }
+
+  @include desktop {
+    width: auto;
+    height: 3rem;
+    display: flex;
+  }
+}
+
+&__logo {
+  @include tablet {
+    padding-right: 2rem;
+  }
+  @include desktop {
+    padding-right: 2rem;
+  }
+}
+
+&__nav-li {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  color: $secondary-color-S;
+  list-style-type: none;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  height: 2rem;
+
+  @include tablet {
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  @include desktop {
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+&--item {
+  text-decoration: none;
+  color: $primary-color-W;
+}
+
+a {
+  color: $secondary-color-S;
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: space-between;
+  display: flex;
+  font-size: 0.59rem;
+}
+&__nav-li:hover {
+  border-bottom: 0.18rem solid $primary-color-W;
+  border-color: $primary-color-W;
+  font-weight: 700;
+
   @include tablet {
     height: 3rem;
   }
   @include desktop {
     height: 3.5rem;
-    padding-left: 5rem;
   }
-
-  &__nav-container {
-    display: flex;
-    padding: 0rem;
-    width: 100vw;
-    margin: 0;
-
-    @include tablet {
-      width: auto;
-      height: 3rem;
-      display: flex;
-    }
-
-    @include desktop {
-      width: auto;
-      height: 3rem;
-      display: flex;
-    }
-  }
-
-  &__logo {
-    @include tablet {
-      padding-right: 2rem;
-    }
-    @include desktop {
-      padding-right: 2rem;
-    }
-  }
-
-  &__nav-li {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    color: $primary-color-W;
-    list-style-type: none;
-    padding: 0.5rem 1rem;
-    box-sizing: border-box;
-    height: 2rem;
-
-    @include tablet {
-      height: 3rem;
-      justify-content: center;
-      align-items: center;
-    }
-    @include desktop {
-      height: 3rem;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
-  &--item {
-    text-decoration: none;
-    color: $primary-color-W;
-  }
-
-  a {
-    color: $primary-color-W;
-    text-decoration: none;
-    list-style-type: none;
-    justify-content: space-between;
-    display: flex;
-    font-size: 0.59rem;
-  }
-  &__nav-li:hover {
-    border-bottom: 0.18rem solid $primary-color-W;
-    border-color: $primary-color-W;
-    font-weight: 700;
-
-    @include tablet {
-      height: 3rem;
-    }
-    @include desktop {
-      height: 3.5rem;
-    }
-  }
+}
 }
 
 /*Hero section*/
@@ -135,10 +129,8 @@
     margin: 0px;
     font-weight: 600;
     align-self: center;
+    font-size: 1rem;
 
-    @include mobile {
-      font-size: 1rem;
-    }
     @include tablet {
       font-size: 2.2rem;
       padding-left: 1rem;
@@ -156,14 +148,16 @@
   padding-left: 1rem;
   padding-right: 1rem;
 
+  h1{
+    color: $primary-color-B;
+   
+  }
   &__header {
     margin: 0;
     font-weight: 600;
     padding-bottom: 1rem;
+    font-size: 1rem;
 
-    @include mobile {
-      font-size: 1rem;
-    }
     @include tablet {
       padding-left: 1rem;
       padding-top: 0.8rem;
@@ -241,10 +235,9 @@
 
   &__title {
     margin: 0;
-    @include mobile {
-      font-size: 0.6rem;
-      font-weight: 600;
-    }
+    font-size: 0.6rem;
+    font-weight: 600;
+
     @include tablet {
       font-size: 1rem;
       font-weight: 600;
@@ -267,11 +260,10 @@
     }
   }
   &__paragraph {
-    @include mobile {
-      font-size: 0.53rem;
-      font-weight: 400;
-      line-height: 0.8rem;
-    }
+    font-size: 0.53rem;
+    font-weight: 400;
+    line-height: 0.8rem;
+
     @include tablet {
       padding-top: 0.6rem;
       padding-left: 1rem;
@@ -304,10 +296,10 @@
       padding-top: 1.5rem;
       padding-bottom: 0.5rem;
     }
-    @include desktop{
+    @include desktop {
       font-size: 1.5rem;
-      padding-left:6rem;
-      padding-top:2rem;
+      padding-left: 6rem;
+      padding-top: 2rem;
     }
   }
 
@@ -319,9 +311,9 @@
     padding: 0;
 
     @include tablet {
-     margin:1rem 3.5rem; 
+      margin: 1rem 3.5rem;
     }
-    @include desktop{
+    @include desktop {
       margin: 2rem 17rem;
     }
   }
@@ -337,18 +329,18 @@
     display: flex;
   }
   p {
-    min-width:100%;
+    min-width: 100%;
     font-size: 0.5rem;
     line-height: 0.8rem;
-    @include tablet{
+    @include tablet {
       line-height: 1rem;
-      font-size:0.6rem;
-      min-width:100%;
+      font-size: 0.6rem;
+      min-width: 100%;
     }
-    @include desktop{
+    @include desktop {
       line-height: 1rem;
-      font-size:0.6rem;
-      min-width:100%;
+      font-size: 0.6rem;
+      min-width: 100%;
     }
   }
   &-wrapper {
@@ -360,16 +352,16 @@
     justify-content: space-between;
   }
 
-  &-avatar{
-  background-color:$secondary-color-S;
-  width: 1.5rem; 
-  height: 1.5rem; 
-  border-radius: 50%; 
+  &-avatar {
+    background-color: $secondary-color-S;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
 
-  @include tablet{
-    width: 2rem;
-    height:2rem;
-  }
+    @include tablet {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
 
@@ -382,9 +374,9 @@
     margin-top: 0.8rem;
     border-radius: 75px;
 
-    @include tablet{
+    @include tablet {
       width: 2rem;
-    height: 2rem;
+      height: 2rem;
     }
   }
 }
@@ -397,9 +389,9 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5rem;
-  width: 100;
+  width: 100%;
 
-  @include tablet{
+  @include tablet {
     padding-bottom: 0.5rem;
   }
 
@@ -429,7 +421,7 @@
       margin: 0.5rem 0rem;
     }
   }
-  .comment-button:hover{
+  .comment-button:hover {
     background-color: $secondary-color-B;
   }
   label {
@@ -439,7 +431,7 @@
     font-weight: 600;
     margin-bottom: 0.25rem;
 
-    @include tablet{
+    @include tablet {
       font-size: 0.5rem;
     }
   }
@@ -450,21 +442,20 @@
     border-radius: 5px;
     border-color: $secondary-color-S;
     background-color: $secondary-color-W;
-    padding:0.5rem;
-    @include tablet{
+    padding: 0.5rem;
+    @include tablet {
       min-height: 2rem;
-      padding:0.75rem;
+      padding: 0.75rem;
     }
     @include desktop {
       min-height: 2rem;
-      padding:0.75rem;
+      padding: 0.75rem;
     }
-   
   }
 
-input:focus{
-  border:1px solid $primary-color-B;
-}
+  input:focus {
+    border: 1px solid $primary-color-B;
+  }
 
   textarea {
     width: 100%;
@@ -474,15 +465,15 @@ input:focus{
     border-color: $secondary-color-S;
     background-color: $secondary-color-W;
     min-height: 4rem;
-    @include tablet{
-      padding:0.75rem;
+    @include tablet {
+      padding: 0.75rem;
     }
     @include desktop {
-      padding:0.75rem;
+      padding: 0.75rem;
     }
   }
 
-  textarea:focus{
+  textarea:focus {
     border: 1px solid $primary-color-B;
   }
   input::placeholder {
@@ -502,6 +493,10 @@ input:focus{
 .photo-gallery {
   margin: 0;
   background-color: $secondary-color-W;
+  
+  h1{
+    color: $primary-color-B;
+  }
 
   @include mobile {
     padding: 1rem 0.67rem 0.67rem 0.67rem;
@@ -524,11 +519,9 @@ input:focus{
 
   &__title {
     margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
 
-    @include mobile {
-      font-size: 1rem;
-      font-weight: 600;
-    }
     @include tablet {
       font-weight: 600;
       padding-bottom: 0.8rem;
@@ -540,10 +533,7 @@ input:focus{
   }
   &__img {
     margin: 0;
-
-    @include mobile {
-      padding-top: 0.5rem;
-    }
+    padding-top: 0.5rem;
 
     @include tablet {
       width: 31.5%;
@@ -700,5 +690,6 @@ input:focus{
         display: none;
       }
     }
-  }
+  
+}
 }

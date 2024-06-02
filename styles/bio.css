@@ -42,17 +42,9 @@ html {
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-  padding-left: 2rem;
   color: #ffffff;
-}
-@media screen and (max-width: 767px) {
-  .header {
-    justify-content: center;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-top: 0.7rem;
-  }
+  justify-content: center;
+  padding: 0 0 0.7rem 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .header {
@@ -99,7 +91,7 @@ html {
   width: 50%;
   display: flex;
   justify-content: center;
-  color: #ffffff;
+  color: #e1e1e1;
   list-style-type: none;
   padding: 0.5rem 1rem;
   box-sizing: border-box;
@@ -124,7 +116,7 @@ html {
   color: #ffffff;
 }
 .header a {
-  color: #ffffff;
+  color: #e1e1e1;
   text-decoration: none;
   list-style-type: none;
   justify-content: space-between;
@@ -176,11 +168,7 @@ html {
   margin: 0px;
   font-weight: 600;
   align-self: center;
-}
-@media screen and (max-width: 767px) {
-  .hero__title {
-    font-size: 1rem;
-  }
+  font-size: 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero__title {
@@ -201,15 +189,14 @@ html {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.about h1 {
+  color: #323232;
+}
 .about__header {
   margin: 0;
   font-weight: 600;
   padding-bottom: 1rem;
-}
-@media screen and (max-width: 767px) {
-  .about__header {
-    font-size: 1rem;
-  }
+  font-size: 1rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .about__header {
@@ -299,12 +286,8 @@ html {
 }
 .bio__title {
   margin: 0;
-}
-@media screen and (max-width: 767px) {
-  .bio__title {
-    font-size: 0.6rem;
-    font-weight: 600;
-  }
+  font-size: 0.6rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .bio__title {
@@ -332,12 +315,10 @@ html {
     padding-right: 6rem;
   }
 }
-@media screen and (max-width: 767px) {
-  .bio__paragraph {
-    font-size: 0.53rem;
-    font-weight: 400;
-    line-height: 0.8rem;
-  }
+.bio__paragraph {
+  font-size: 0.53rem;
+  font-weight: 400;
+  line-height: 0.8rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .bio__paragraph {
@@ -474,7 +455,7 @@ html {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5rem;
-  width: 100;
+  width: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .input-container {
@@ -599,6 +580,9 @@ html {
   margin: 0;
   background-color: #fafafa;
 }
+.photo-gallery h1 {
+  color: #323232;
+}
 @media screen and (max-width: 767px) {
   .photo-gallery {
     padding: 1rem 0.67rem 0.67rem 0.67rem;
@@ -623,12 +607,8 @@ html {
 }
 .photo-gallery__title {
   margin: 0;
-}
-@media screen and (max-width: 767px) {
-  .photo-gallery__title {
-    font-size: 1rem;
-    font-weight: 600;
-  }
+  font-size: 1rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__title {
@@ -644,11 +624,7 @@ html {
 }
 .photo-gallery__img {
   margin: 0;
-}
-@media screen and (max-width: 767px) {
-  .photo-gallery__img {
-    padding-top: 0.5rem;
-  }
+  padding-top: 0.5rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .photo-gallery__img {
