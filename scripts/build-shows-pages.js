@@ -32,7 +32,7 @@ function loadShows(showsList) {
       day: "2-digit",
       year: "numeric",
     };
-    const formattedDate = dateObj.toLocaleDateString("en-US", options).replace(/,/, '');
+    const formattedDate = dateObj.toLocaleDateString("en-US", options).replace(/,/g, '');
     dateEl.textContent = formattedDate;
 
     eachShow.appendChild(dateEl);
