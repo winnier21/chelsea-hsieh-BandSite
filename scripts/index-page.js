@@ -1,23 +1,18 @@
-const comment = [
-  {
-    name: "Victor Pinto",
-    timestamp: "11/02/2023",
-    message:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Christina Cabrera",
-    timestamp: "10/28/2023",
-    message:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Isaac Tadesse",
-    timestamp: "10/20/2023",
-    message:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+import runApi from "./band-site-api.js";
+
+async function newGetComments (){
+  try{
+    const newGet = await runApi.getComments();
+    console.log(newGet);
+    renderAllComments(newGet);
+  } catch (error){
+    console.log(error);
+  
+  }
+}
+
+newGetComments();
+
 
 const commentContainer = document.querySelector(".comment-container");
 const commentForm = document.getElementById("comment-form");
@@ -27,13 +22,14 @@ const commentTextInput = document.getElementById("comment-text");
 const commentList = document.createElement("div");
 function renderAllComments(comment) {
   commentList.innerHTML = "";
-  comment.forEach(displayComment);
+  comment.sort((a, b) => b.timestamp - a.timestamp).forEach(displayComment);
 }
 
 function displayComment(comment) {
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
 
+  const commentDate = new Date (comment.timestamp);
   const commentAvatarWrapper = document.createElement("div");
   commentAvatarWrapper.classList.add("comment-avatarWrapper");
 
@@ -52,15 +48,16 @@ function displayComment(comment) {
   commentName.textContent = comment.name;
   commentWrapperTop.appendChild(commentName);
 
+  const formattedDate = `${commentDate.getMonth() + 1}/${commentDate.getDate()}/${commentDate.getFullYear()}`;
   const commentTimestamp = document.createElement("span");
   commentTimestamp.classList.add("comment-timestamp");
-  commentTimestamp.textContent = comment.timestamp;
+  commentTimestamp.textContent = formattedDate;
   commentWrapperTop.appendChild(commentTimestamp);
   commentWrapper.appendChild(commentWrapperTop);
 
   const commentText = document.createElement("p");
   commentText.classList.add("comment-text");
-  commentText.textContent = comment.message;
+  commentText.textContent = comment.comment;
   commentWrapper.appendChild(commentText);
 
   commentElement.appendChild(commentAvatarWrapper);
@@ -77,22 +74,18 @@ function clearCommentForm() {
   commentTextInput.value = "";
 }
 
-commentForm.addEventListener("submit", function (e) {
+commentForm.addEventListener("submit", async function (e) {
   e.preventDefault();
   const name = nameInput.value;
-  const message = commentTextInput.value;
+  const comment = commentTextInput.value;
 
-  if (name && message) {
-    const timestamp = new Date().toLocaleDateString();
-    const newComment = {
-      name,
-      timestamp,
-      message,
-    };
+try{
+  await runApi.postComments(name,comment);
+  clearCommentForm();
+  newGetComments();
+} catch(error){
+  console.error(error);
+}
 
-    comment.unshift(newComment);
-    renderAllComments(comment);
-    clearCommentForm();
-  }
+
 });
-comment.forEach(displayComment);

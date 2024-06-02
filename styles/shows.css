@@ -149,7 +149,7 @@ html {
   }
 }
 .shows .each-event:hover {
-  background-color: #fafafa;
+  background-color: #e1e1e1;
 }
 .shows__header {
   font-weight: 600;
@@ -171,9 +171,41 @@ html {
     padding: 1rem 5rem 0rem 5rem;
   }
 }
-.shows__list .table__headers {
+.shows .table__headers {
   display: flex;
   padding-left: 2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows .table__headers #dateid {
+    width: 7.1rem;
+  }
+  .shows .table__headers #venueid {
+    width: 7rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows .table__headers #dateid {
+    width: 9rem;
+  }
+  .shows .table__headers #venueid {
+    width: 6.6rem;
+  }
+}
+.shows .table__headers .desktop__heading {
+  font-weight: 400;
+  color: #afafaf;
+  font-size: 0.5rem;
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows .table__headers .desktop__heading {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows .table__headers .desktop__heading {
+    display: flex;
+  }
 }
 .shows__list h3 {
   color: #afafaf;
@@ -264,12 +296,6 @@ html {
     display: flex;
     font-size: 0.5rem;
   }
-}
-.shows__list #dateid {
-  width: 9rem;
-}
-.shows__list #venueid {
-  width: 6.6rem;
 }
 .shows__list .buyTickets {
   font-size: 0.6rem;
