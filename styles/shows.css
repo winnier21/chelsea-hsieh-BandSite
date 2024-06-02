@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("/assets/Font/AvenirNextLTProBold.ttf") format("truetype"), url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("/assets/Font/AvenirNextLTProDemi.ttf") format("truetype"), url("AvenirNextLTPro-Demi.woff2") format("woff2"), url("AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("/assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("/assets/Font/AvenirNextLTPro.ttf") format("truetype"), url("AvenirNextLTPro-Regular.woff2") format("woff2"), url("AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
 * {
   box-sizing: border-box;
 }
@@ -50,15 +71,16 @@ html {
 }
 .hero__overlay {
   padding: 1rem;
-}
-@media screen and (min-width: 1280px) {
-  .hero__overlay div {
-    width: 60%;
-  }
+  display: block;
 }
 @media screen and (min-width: 1280px) {
   .hero__overlay {
     display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__overlay div {
+    width: 60%;
   }
 }
 .hero__overlay .hero-show__heading {
@@ -110,6 +132,7 @@ html {
   border-bottom: 1px solid #e1e1e1;
   padding: 0rem 1rem;
   padding-bottom: 0.5rem;
+  display: block;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows .each-event {
@@ -148,9 +171,41 @@ html {
     padding: 1rem 5rem 0rem 5rem;
   }
 }
-.shows__list .table__headers {
+.shows .table__headers {
   display: flex;
   padding-left: 2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows .table__headers #dateid {
+    width: 7.1rem;
+  }
+  .shows .table__headers #venueid {
+    width: 7rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows .table__headers #dateid {
+    width: 9rem;
+  }
+  .shows .table__headers #venueid {
+    width: 6.6rem;
+  }
+}
+.shows .table__headers .desktop__heading {
+  font-weight: 400;
+  color: #afafaf;
+  font-size: 0.5rem;
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows .table__headers .desktop__heading {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows .table__headers .desktop__heading {
+    display: flex;
+  }
 }
 .shows__list h3 {
   color: #afafaf;
@@ -241,12 +296,6 @@ html {
     display: flex;
     font-size: 0.5rem;
   }
-}
-.shows__list #dateid {
-  width: 9rem;
-}
-.shows__list #venueid {
-  width: 6.6rem;
 }
 .shows__list .buyTickets {
   font-size: 0.6rem;

@@ -22,13 +22,14 @@ const commentTextInput = document.getElementById("comment-text");
 const commentList = document.createElement("div");
 function renderAllComments(comment) {
   commentList.innerHTML = "";
-  comment.forEach(displayComment);
+  comment.sort((a, b) => b.timestamp - a.timestamp).forEach(displayComment);
 }
 
 function displayComment(comment) {
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
 
+  const commentDate = new Date (comment.timestamp);
   const commentAvatarWrapper = document.createElement("div");
   commentAvatarWrapper.classList.add("comment-avatarWrapper");
 
@@ -47,9 +48,10 @@ function displayComment(comment) {
   commentName.textContent = comment.name;
   commentWrapperTop.appendChild(commentName);
 
+  const formattedDate = `${commentDate.getMonth() + 1}/${commentDate.getDate()}/${commentDate.getFullYear()}`;
   const commentTimestamp = document.createElement("span");
   commentTimestamp.classList.add("comment-timestamp");
-  commentTimestamp.textContent = comment.timestamp;
+  commentTimestamp.textContent = formattedDate;
   commentWrapperTop.appendChild(commentTimestamp);
   commentWrapper.appendChild(commentWrapperTop);
 
@@ -76,6 +78,7 @@ commentForm.addEventListener("submit", async function (e) {
   e.preventDefault();
   const name = nameInput.value;
   const comment = commentTextInput.value;
+
 try{
   await runApi.postComments(name,comment);
   clearCommentForm();
@@ -83,4 +86,6 @@ try{
 } catch(error){
   console.error(error);
 }
+
+
 });

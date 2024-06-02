@@ -35,6 +35,11 @@
 
   &__overlay {
     padding: 1rem;
+    display: block;
+    
+    @include desktop {
+      display: flex;
+    }
 
     div {
       @include desktop {
@@ -42,9 +47,6 @@
       }
     }
 
-    @include desktop {
-      display: flex;
-    }
 
     .hero-show__heading {
       color: $primary-color-W;
@@ -80,6 +82,8 @@
 
 .shows {
   padding: 1rem 0rem;
+
+ 
   @include desktop {
     display: flex;
   }
@@ -88,6 +92,8 @@
     border-bottom: 1px solid $secondary-color-S;
     padding: 0rem 1rem;
     padding-bottom: 0.5rem;
+    display: block;
+
 
     @include tablet {
       display: flex;
@@ -121,12 +127,46 @@
       padding: 1rem 5rem 0rem 5rem;
     }
   }
-  &__list {
-    .table__headers {
-      display: flex;
-      padding-left: 2rem;
+  .table__headers {
+    display: flex;
+    padding-left: 2rem;
+
+    @include tablet{
+      #dateid {
+        width: 7.1rem;
+      }
+      #venueid {
+        width: 7rem;
+      }
     }
-    
+
+    @include desktop{
+    #dateid {
+      width: 9rem;
+    }
+    #venueid {
+      width: 6.6rem;
+    }
+  }
+  
+    .desktop__heading{
+      font-weight: 400;
+      color: $primary-color-S;
+      font-size: 0.5rem;
+      display: none;
+
+      @include tablet{
+        display: flex;
+      }
+      @include desktop{
+        display: flex;
+      }
+      
+    }
+  }
+
+
+  &__list {
     
 
     h3 {
@@ -201,12 +241,7 @@
       }
     }
 
-    #dateid {
-      width: 9rem;
-    }
-    #venueid {
-      width: 6.6rem;
-    }
+   
     .buyTickets {
       font-size: 0.6rem;
       background-color: $primary-color-B;
@@ -226,4 +261,3 @@
     }
   }
 }
-

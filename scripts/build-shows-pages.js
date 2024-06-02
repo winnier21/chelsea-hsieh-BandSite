@@ -33,8 +33,6 @@ function loadShows(showsList) {
       year: "numeric",
     };
     const formattedDate = dateObj.toLocaleDateString("en-US", options).replace(/,/, '');
-
-    // Set the formatted date as text content
     dateEl.textContent = formattedDate;
 
     eachShow.appendChild(dateEl);
