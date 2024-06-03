@@ -1,29 +1,20 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("/assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"),
-    url("/assets/Font/AvenirNextLTProBold.ttf") format("truetype"),
-    url("AvenirNextLTPro-Bold.woff2") format("woff2"),
-    url("AvenirNextLTPro-Bold.woff") format("woff");
+  src: url("/assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"), url("/assets/Font/AvenirNextLTProBold.ttf") format("truetype"), url("AvenirNextLTPro-Bold.woff2") format("woff2"), url("AvenirNextLTPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: fallback;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("/assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"),
-    url("/assets/Font/AvenirNextLTProDemi.ttf") format("truetype"),
-    url("AvenirNextLTPro-Demi.woff2") format("woff2"),
-    url("AvenirNextLTPro-Demi.woff") format("woff");
+  src: url("/assets/Font/AvenirNextLTPro-Demi.otf") format("opentype"), url("/assets/Font/AvenirNextLTProDemi.ttf") format("truetype"), url("AvenirNextLTPro-Demi.woff2") format("woff2"), url("AvenirNextLTPro-Demi.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
-  src: url("/assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"),
-    url("/assets/Font/AvenirNextLTPro.ttf") format("truetype"),
-    url("AvenirNextLTPro-Regular.woff2") format("woff2"),
-    url("AvenirNextLTPro-Regular.woff") format("woff");
+  src: url("/assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("/assets/Font/AvenirNextLTPro.ttf") format("truetype"), url("AvenirNextLTPro-Regular.woff2") format("woff2"), url("AvenirNextLTPro-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -148,6 +139,7 @@ html {
     display: flex;
     margin: 0rem 1rem;
     padding: 0.5rem 1rem;
+    height: 3.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -155,9 +147,13 @@ html {
     display: flex;
     margin: 0rem 1rem;
     padding: 0.5rem 1rem;
+    height: 3rem;
   }
 }
 .shows .each-event:hover {
+  background-color: #fafafa;
+}
+.shows .each-event--selected {
   background-color: #e1e1e1;
 }
 .shows__header {
@@ -170,7 +166,7 @@ html {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__header {
     font-size: 1.5rem;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-left: 2rem;
   }
 }
@@ -185,6 +181,9 @@ html {
   padding-left: 2rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows .table__headers {
+    padding-top: 1rem;
+  }
   .shows .table__headers #dateid {
     width: 7.1rem;
   }
@@ -193,6 +192,9 @@ html {
   }
 }
 @media screen and (min-width: 1280px) {
+  .shows .table__headers {
+    padding-top: 1.5rem;
+  }
   .shows .table__headers #dateid {
     width: 9rem;
   }
@@ -214,6 +216,11 @@ html {
 @media screen and (min-width: 1280px) {
   .shows .table__headers .desktop__heading {
     display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__list {
+    padding-left: 1rem;
   }
 }
 .shows__list h3 {
@@ -270,28 +277,24 @@ html {
   font-weight: 400;
   margin: 0;
   font-size: 0.6em;
-}
-@media screen and (max-width: 767px) {
-  .shows__list .locationfield {
-    padding-bottom: 0.5rem;
-  }
+  padding-bottom: 0.5rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__list .locationfield {
     width: 7rem;
     align-self: center;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .shows__list .locationfield {
     align-self: center;
     width: 8rem;
+    padding-bottom: 0;
   }
 }
-@media screen and (max-width: 767px) {
-  .shows__list .desktop__heading {
-    display: none;
-  }
+.shows__list .desktop__heading {
+  display: none;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .shows__list .desktop__heading {
@@ -319,6 +322,8 @@ html {
   .shows__list .buyTickets {
     width: 22%;
     padding-left: 0.5rem;
+    height: 1.8rem;
+    margin-top: 0.3rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -326,4 +331,4 @@ html {
     width: 22%;
     padding-left: 0.5rem;
   }
-} /*# sourceMappingURL=shows.css.map */
+}/*# sourceMappingURL=shows.css.map */

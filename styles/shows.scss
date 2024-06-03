@@ -96,15 +96,20 @@
       display: flex;
       margin: 0rem 1rem;
       padding: 0.5rem 1rem;
+      height: 3.5rem;
     }
     @include desktop {
       display: flex;
       margin: 0rem 1rem;
       padding: 0.5rem 1rem;
+      height: 3rem;
     }
-  }
-  .each-event:hover {
-    background-color: $secondary-color-S;
+    &:hover {
+      background-color: $secondary-color-W;
+    }
+    &--selected {
+      background-color: $secondary-color-S;
+    }
   }
 
   &__header {
@@ -116,7 +121,7 @@
 
     @include tablet {
       font-size: 1.5rem;
-      padding-top: 1rem;
+      padding-top: 2rem;
       padding-left: 2rem;
     }
     @include desktop {
@@ -129,6 +134,7 @@
     padding-left: 2rem;
 
     @include tablet {
+      padding-top: 1rem;
       #dateid {
         width: 7.1rem;
       }
@@ -138,6 +144,7 @@
     }
 
     @include desktop {
+      padding-top: 1.5rem;
       #dateid {
         width: 9rem;
       }
@@ -162,6 +169,9 @@
   }
 
   &__list {
+    @include tablet {
+      padding-left: 1rem;
+    }
     h3 {
       color: $primary-color-S;
       font-weight: 400;
@@ -206,23 +216,23 @@
       font-weight: 400;
       margin: 0;
       font-size: 0.6em;
-      @include mobile {
-        padding-bottom: 0.5rem;
-      }
+      padding-bottom: 0.5rem;
+
       @include tablet {
         width: 7rem;
         align-self: center;
+        padding-bottom: 0;
       }
       @include desktop {
         align-self: center;
         width: 8rem;
+        padding-bottom: 0;
       }
     }
 
     .desktop__heading {
-      @include mobile {
-        display: none;
-      }
+      display: none;
+
       @include tablet {
         display: flex;
         width: 7rem;
@@ -245,6 +255,8 @@
       @include tablet {
         width: 22%;
         padding-left: 0.5rem;
+        height: 1.8rem;
+        margin-top: 0.3rem;
       }
       @include desktop {
         width: 22%;

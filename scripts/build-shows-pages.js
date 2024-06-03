@@ -64,6 +64,14 @@ function loadShows(showsList) {
 
     eachShow.classList.add("each-event");
     showList.appendChild(eachShow);
+
+    eachShow.addEventListener("click", (event)=> {
+      event.preventDefault();
+      document.querySelectorAll ('.each-event').forEach(show => {
+        show.classList.remove('each-event--selected');
+      });
+      eachShow.classList.add('each-event--selected');
+    });
   });
 }
 
