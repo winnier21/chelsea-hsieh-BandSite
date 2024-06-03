@@ -15,98 +15,96 @@
   flex-wrap: wrap;
   color: $primary-color-W;
   justify-content: center;
-  padding-top:0.7rem;
-
-@include tablet {
-  height: 3rem;
-  justify-content: left;
-  padding-left:2rem;
-  padding-top:0;
-
-  
-}
-@include desktop {
-  height: 3.5rem;
-  justify-content: left;
-  padding-left: 5rem;
-  padding-top:0;
-}
-
-&__nav-container {
-  display: flex;
-  padding: 0rem;
-  width: 100vw;
-  margin: 0;
-
-  @include tablet {
-    width: auto;
-    height: 3rem;
-    display: flex;
-  }
-
-  @include desktop {
-    width: auto;
-    height: 3rem;
-    display: flex;
-  }
-}
-
-&__logo {
-  @include tablet {
-    padding-right: 2rem;
-  }
-  @include desktop {
-    padding-right: 2rem;
-  }
-}
-
-&__nav-li {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  color: $secondary-color-S;
-  list-style-type: none;
-  padding: 0.5rem 1rem;
-  box-sizing: border-box;
-  height: 2rem;
+  padding-top: 0.7rem;
 
   @include tablet {
     height: 3rem;
-    justify-content: center;
-    align-items: center;
-  }
-  @include desktop {
-    height: 3rem;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-&--item {
-  text-decoration: none;
-  color: $primary-color-W;
-}
-
-a {
-  color: $secondary-color-S;
-  text-decoration: none;
-  list-style-type: none;
-  justify-content: space-between;
-  display: flex;
-  font-size: 0.59rem;
-}
-&__nav-li:hover {
-  border-bottom: 0.18rem solid $primary-color-W;
-  border-color: $primary-color-W;
-  font-weight: 700;
-
-  @include tablet {
-    height: 3rem;
+    justify-content: left;
+    padding-left: 2rem;
+    padding-top: 0;
   }
   @include desktop {
     height: 3.5rem;
+    justify-content: left;
+    padding-left: 5rem;
+    padding-top: 0;
   }
-}
+
+  &__nav-container {
+    display: flex;
+    padding: 0rem;
+    width: 100vw;
+    margin: 0;
+
+    @include tablet {
+      width: auto;
+      height: 3rem;
+      display: flex;
+    }
+
+    @include desktop {
+      width: auto;
+      height: 3rem;
+      display: flex;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      padding-right: 2rem;
+    }
+    @include desktop {
+      padding-right: 2rem;
+    }
+  }
+
+  &__nav-li {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    color: $secondary-color-S;
+    list-style-type: none;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    height: 2rem;
+
+    @include tablet {
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
+    @include desktop {
+      height: 3rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--item {
+    text-decoration: none;
+    color: $primary-color-W;
+  }
+
+  a {
+    color: $secondary-color-S;
+    text-decoration: none;
+    list-style-type: none;
+    justify-content: space-between;
+    display: flex;
+    font-size: 0.59rem;
+  }
+  &__nav-li:hover {
+    border-bottom: 0.18rem solid $primary-color-W;
+    border-color: $primary-color-W;
+    font-weight: 700;
+
+    @include tablet {
+      height: 3rem;
+    }
+    @include desktop {
+      height: 3.5rem;
+    }
+  }
 }
 
 /*Hero section*/
@@ -155,9 +153,8 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
 
-  h1{
+  h1 {
     color: $primary-color-B;
-   
   }
   &__header {
     margin: 0;
@@ -501,8 +498,8 @@ a {
 .photo-gallery {
   margin: 0;
   background-color: $secondary-color-W;
-  
-  h1{
+
+  h1 {
     color: $primary-color-B;
   }
 
@@ -698,6 +695,5 @@ a {
         display: none;
       }
     }
-  
-}
+  }
 }

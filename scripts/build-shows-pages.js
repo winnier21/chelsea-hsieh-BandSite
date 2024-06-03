@@ -32,7 +32,9 @@ function loadShows(showsList) {
       day: "2-digit",
       year: "numeric",
     };
-    const formattedDate = dateObj.toLocaleDateString("en-US", options).replace(/,/g, '');
+    const formattedDate = dateObj
+      .toLocaleDateString("en-US", options)
+      .replace(/,/g, "");
     dateEl.textContent = formattedDate;
 
     eachShow.appendChild(dateEl);
@@ -64,7 +66,6 @@ function loadShows(showsList) {
     showList.appendChild(eachShow);
   });
 }
-
 
 function buildShowsPage() {
   newShowsList();

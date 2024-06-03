@@ -1,18 +1,16 @@
 import runApi from "./band-site-api.js";
 
-async function newGetComments (){
-  try{
+async function newGetComments() {
+  try {
     const newGet = await runApi.getComments();
     console.log(newGet);
     renderAllComments(newGet);
-  } catch (error){
+  } catch (error) {
     console.log(error);
-  
   }
 }
 
 newGetComments();
-
 
 const commentContainer = document.querySelector(".comment-container");
 const commentForm = document.getElementById("comment-form");
@@ -29,7 +27,7 @@ function displayComment(comment) {
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
 
-  const commentDate = new Date (comment.timestamp);
+  const commentDate = new Date(comment.timestamp);
   const commentAvatarWrapper = document.createElement("div");
   commentAvatarWrapper.classList.add("comment-avatarWrapper");
 
@@ -48,7 +46,9 @@ function displayComment(comment) {
   commentName.textContent = comment.name;
   commentWrapperTop.appendChild(commentName);
 
-  const formattedDate = `${commentDate.getMonth() + 1}/${commentDate.getDate()}/${commentDate.getFullYear()}`;
+  const formattedDate = `${
+    commentDate.getMonth() + 1
+  }/${commentDate.getDate()}/${commentDate.getFullYear()}`;
   const commentTimestamp = document.createElement("span");
   commentTimestamp.classList.add("comment-timestamp");
   commentTimestamp.textContent = formattedDate;
@@ -79,13 +79,11 @@ commentForm.addEventListener("submit", async function (e) {
   const name = nameInput.value;
   const comment = commentTextInput.value;
 
-try{
-  await runApi.postComments(name,comment);
-  clearCommentForm();
-  newGetComments();
-} catch(error){
-  console.error(error);
-}
-
-
+  try {
+    await runApi.postComments(name, comment);
+    clearCommentForm();
+    newGetComments();
+  } catch (error) {
+    console.error(error);
+  }
 });
