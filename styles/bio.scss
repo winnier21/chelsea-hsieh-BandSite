@@ -447,6 +447,7 @@
     border-radius: 5px;
     border-color: $secondary-color-S;
     background-color: $secondary-color-W;
+    font-family: "AvenirNext LT Pro";
     padding: 0.5rem;
     @include tablet {
       min-height: 2rem;
@@ -469,6 +470,7 @@
     border-radius: 4px;
     border-color: $secondary-color-S;
     background-color: $secondary-color-W;
+    font-family: "AvenirNext LT Pro";
     min-height: 4rem;
     @include tablet {
       padding: 0.75rem;

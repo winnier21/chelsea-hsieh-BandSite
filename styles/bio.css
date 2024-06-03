@@ -522,6 +522,7 @@ html {
   border-radius: 5px;
   border-color: #e1e1e1;
   background-color: #fafafa;
+  font-family: "AvenirNext LT Pro";
   padding: 0.5rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -546,6 +547,7 @@ html {
   border-radius: 4px;
   border-color: #e1e1e1;
   background-color: #fafafa;
+  font-family: "AvenirNext LT Pro";
   min-height: 4rem;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
